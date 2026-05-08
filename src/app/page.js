@@ -1,12 +1,12 @@
-import Hero from "../components/hero/Hero";
-import Navbar from "../components/navbar/Navbar";
-import Footer from "../components/footer/Footer";
-import About from "../components/sections/About";
-import Services from "../components/sections/Services";
-import ComplianceandSecurity from "../components/sections/ComplianceSecurity";
+import Hero from "@/components/sections/hero/Hero";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import About from "@/components/sections/about/About";
+import Services from "@/components/sections/services/Services";
+import ComplianceandSecurity from "@/components/sections/compliance/ComplianceSecurity";
 
-import Contact from "../components/sections/Contact";
-import RPOBusinessAdvisory from "../components/sections/RPOBusinessAdvisory";
+import Contact from "@/components/sections/Contact";
+import RPOBusinessAdvisory from "@/components/sections/rpo/RPOBusinessAdvisory";
 
 
 export default function Home() {

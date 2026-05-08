@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "@/components/navbar/Navbar";
-import Footer from "@/components/footer/Footer";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 export const metadata = {
   title: "Compliance & Regulatory Framework | ScaleUp Accounting Ltd",

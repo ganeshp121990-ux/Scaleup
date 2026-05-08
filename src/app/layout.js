@@ -1,7 +1,7 @@
 import { Inter, Poppins } from "next/font/google";
-import "../styles/globals.css";
-import SmoothScroll from "../components/SmoothScroll";
-import Cursor from "../components/Cursor";
+import "@/app/globals.css";
+import SmoothScroll from "@/components/SmoothScroll";
+import Cursor from "@/components/Cursor";
 
 const inter = Inter({
   subsets: ["latin"],
