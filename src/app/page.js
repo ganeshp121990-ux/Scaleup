@@ -1,13 +1,12 @@
 import Hero from "../components/hero/Hero";
-import Navbar from "../components/navbar/Navbar";
+import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/components/footer/Footer";
 import About from "../components/sections/About";
 import Services from "../components/sections/Services";
-import ComplianceandSecurity from "../components/sections/Compliance&Security";
+import ComplianceandSecurity from "../components/sections/ComplianceSecurity";
 
 import Contact from "../components/sections/Contact";
-import Footer from "../components/footer/Footer";
-
-import RPOandBusinessAdvisory from "../components/sections/RPO&BusinessAdvisory";
+import RPOBusinessAdvisory from "../components/sections/RPOBusinessAdvisory";
 
 
 export default function Home() {
@@ -17,7 +16,7 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
-      <RPOandBusinessAdvisory />
+      <RPOBusinessAdvisory />
       <ComplianceandSecurity />
       <Contact />
       <Footer />
