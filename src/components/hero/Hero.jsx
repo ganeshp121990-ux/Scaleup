@@ -9,12 +9,9 @@ import {
   useAnimationFrame,
 } from "framer-motion";
 import { useRouter } from "next/navigation";
+import Image from "next/image"
 
-/* ─────────────────────────────────────────────────────────────
-   HERO — "Precision Focus System"
-   Clarity emerging from uncertainty. Lens-focus reveal.
-   Light theme · Parallax depth · Ambient idle motion
-   ───────────────────────────────────────────────────────────── */
+
 
 const EASE = [0.2, 1, 0.2, 1];
 
@@ -27,26 +24,22 @@ export default function Hero() {
   const router = useRouter();
   const sectionRef = useRef(null);
   const [phase, setPhase] = useState(0);
-  // 0 = blurred / waiting
-  // 1 = focusing (blur dissolving)
-  // 2 = sharp + text revealing
 
-  /* ── Ambient idle motion (sin-wave micro-drift) ── */
   const idleDrift = useMotionValue(0);
   const idleBreath = useMotionValue(1);
 
   useAnimationFrame((time) => {
-    // Very subtle vertical drift: ±2px over ~6s cycle
+
     idleDrift.set(Math.sin(time / 7000) * 1.2);
-    // Light breathing: opacity oscillates 1.0 → 0.92 → 1.0 over ~8s
+
     idleBreath.set(0.97 + Math.sin(time / 9000) * 0.025);
   });
 
-  /* ── Phased reveal timeline ── */
+
   useEffect(() => {
-    // Phase 1: begin lens focus after 400ms
+
     const t1 = setTimeout(() => setPhase(1), 400);
-    // Phase 2: scene sharp, start text reveals after focus completes (~2s)
+
     const t2 = setTimeout(() => setPhase(2), 2200);
     return () => {
       clearTimeout(t1);
@@ -54,7 +47,7 @@ export default function Hero() {
     };
   }, []);
 
-  /* ── Scroll-linked parallax ── */
+
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
@@ -66,11 +59,11 @@ export default function Hero() {
     restDelta: 0.001,
   });
 
-  // Layer 1 — Video (slowest)
+
   const vidScale = useTransform(smooth, [0, 1], [1, 1.06]);
   const vidY = useTransform(smooth, [0, 1], ["0%", "4%"]);
 
-  // Layer 2 — Light overlays (medium)
+
   const lightY = useTransform(smooth, [0, 1], ["0%", "10%"]);
 
   // Layer 3 — Grain / grid (fastest)
@@ -336,7 +329,7 @@ export default function Hero() {
 
             {/* AAT */}
             <div className="flex items-center gap-3 px-5 py-3 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
-              <img src="/logos/aat.svg" className="h-7 w-auto" />
+              <img src="/logo/aat_v2.svg?v=1" className="h-7 w-auto" />
               <div className="text-left leading-tight">
                 <p className="text-[11px] font-semibold text-deepBlue">AAT</p>
                 <p className="text-[10px] text-gray-500">LICENSED MEMBER</p>
@@ -345,7 +338,7 @@ export default function Hero() {
 
             {/* ICO */}
             <div className="flex items-center gap-3 px-5 py-3 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
-              <img src="/logos/ico.svg" className="h-7 w-auto" />
+              <img src="/logo/ico_v2.svg?v=1" className="h-7 w-auto" />
               <div className="text-left leading-tight">
                 <p className="text-[11px] font-semibold text-deepBlue">ICO</p>
                 <p className="text-[10px] text-gray-500">REGISTERED</p>
@@ -354,7 +347,7 @@ export default function Hero() {
 
             {/* XERO */}
             <div className="flex items-center gap-3 px-5 py-3 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
-              <img src="/logos/xero.svg" className="h-7 w-auto" />
+              <img src="/logo/xero_v2.svg?v=1" className="h-7 w-auto" />
               <div className="text-left leading-tight">
                 <p className="text-[11px] font-semibold text-deepBlue">Xero</p>
                 <p className="text-[10px] text-gray-500">PARTNER</p>
@@ -363,7 +356,7 @@ export default function Hero() {
 
             {/* QUICKBOOKS */}
             <div className="flex items-center gap-3 px-5 py-3 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
-              <img src="/logos/quickbooks.svg" className="h-7 w-auto" />
+              <img src="/logo/quickbooks_v2.svg?v=1" className="h-7 w-auto" />
               <div className="text-left leading-tight">
                 <p className="text-[11px] font-semibold text-deepBlue">QuickBooks</p>
                 <p className="text-[10px] text-gray-500">PARTNER</p>
