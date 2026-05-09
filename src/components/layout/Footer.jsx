@@ -26,8 +26,7 @@ export default function Footer() {
 
   return (
     <footer className="relative w-full bg-[#07111F] text-slate-300 pt-20 md:pt-32 pb-10 overflow-hidden font-sans border-t border-white/[0.04]">
-      {/* ── BACKGROUND SYSTEM ── */}
-      {/* Ultra-subtle architectural grid, no glowing lights */}
+
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.0]"
         style={{
@@ -44,7 +43,7 @@ export default function Footer() {
       <div className="relative z-10 max-w-[88rem] mx-auto px-6 md:px-12 lg:px-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20 lg:mb-28">
 
-          {/* ── COLUMN 1: FIRM IDENTITY ── */}
+
           <div className="lg:col-span-4 flex flex-col pr-0 lg:pr-12">
             <h2 className="text-[22px] font-medium text-[#F8FAFC] tracking-tight mb-6">
               ScaleUp Accounting
@@ -107,7 +106,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* ── COLUMN 2: SERVICES ── */}
+
           <div className="lg:col-span-3 flex flex-col">
             <h3 className="text-[14px]
 tracking-[0.01em] font-medium text-[#F8FAFC] mb-6">
@@ -133,7 +132,7 @@ tracking-[0.01em] font-medium text-[#F8FAFC] mb-6">
             </ul>
           </div>
 
-          {/* ── COLUMN 3: INTELLIGENCE ── */}
+
           <div className="lg:col-span-3 flex flex-col">
             <h3 className="text-[15px] font-medium text-[#F8FAFC] mb-6">
               Intelligence
@@ -157,7 +156,7 @@ tracking-[0.01em] font-medium text-[#F8FAFC] mb-6">
             </ul>
           </div>
 
-          {/* ── COLUMN 4: CLIENT PORTAL & SOCIAL ── */}
+
           <div className="lg:col-span-2 flex flex-col">
             <h3 className="text-[15px] font-medium text-[#F8FAFC] mb-6">
               Client Portal
@@ -188,7 +187,7 @@ tracking-[0.01em] font-medium text-[#F8FAFC] mb-6">
 
         </div>
 
-        {/* ── REGULATORY & LEGAL FOOTER ── */}
+
         <div className="pt-8 border-t border-white/[0.08] flex flex-col lg:flex-row lg:items-end justify-between gap-10">
 
           <div className="flex flex-col gap-6 max-w-3xl">

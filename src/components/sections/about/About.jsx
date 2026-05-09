@@ -31,7 +31,7 @@ export default function About() {
     mass: 0.4,
   });
 
-  // Parallax calculations for depth (reduced movement)
+  
   const yHeadline = useTransform(smoothProgress, [0, 1], [10, -10]);
   const yGrid = useTransform(smoothProgress, [0, 1], [8, -8]);
 
@@ -41,10 +41,7 @@ export default function About() {
       id="about"
       className="relative bg-[linear-gradient(180deg,#F5F8FF_0%,#FAFAF8_100%)] text-[#0A1A2F] overflow-hidden py-32 md:py-48 lg:py-56"
     >
-      {/* Soft Ambient Gradients for Cinematic Depth (GPU Optimized - No heavy blur filters) */}
-      {/* BACKGROUND SYSTEM (FIXED) */}
-
-      {/* Base Gradients (pushed back) */}
+      
       <div className="absolute inset-0 -z-20 pointer-events-none" aria-hidden="true">
         <div className="absolute top-0 left-1/4 w-[120%] h-[120%] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white via-[#FAFAFA]/30 to-transparent opacity-60 transform -translate-x-1/2 -translate-y-1/2" />
 
@@ -53,12 +50,12 @@ export default function About() {
         <div className="absolute top-1/2 left-1/2 w-[80%] h-[80%] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#D4AF37]/[0.03] to-transparent opacity-50 transform -translate-x-1/2 -translate-y-1/2" />
       </div>
 
-      {/* OPTION 3: Illuminated Blueprint Grid */}
+      
       <div className="absolute inset-0 z-0 pointer-events-none bg-[#FAFAF8]" aria-hidden="true">
-        {/* Ambient Top Glow */}
+      
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[60%] bg-[radial-gradient(ellipse_at_top,_#F5F8FF_0%,_transparent_70%)]" />
 
-        {/* Base Grid */}
+       
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -70,16 +67,16 @@ export default function About() {
           }}
         />
 
-        {/* Soft lighting accents hitting the grid */}
+       
         <div className="absolute top-1/4 left-0 w-[50vw] h-[50vw] bg-[radial-gradient(circle_at_center,_#2F5B8C_0%,_transparent_60%)] opacity-[0.02]" />
         <div className="absolute bottom-1/4 right-0 w-[40vw] h-[40vw] bg-[radial-gradient(circle_at_center,_#D4AF37_0%,_transparent_60%)] opacity-[0.03]" />
 
-        {/* Seamless bottom fade out */}
+        
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#FAFAF8] to-transparent" />
       </div>
       <div className="max-w-[85rem] mx-auto px-6 md:px-10 lg:px-16 relative z-10">
 
-        {/* Subtle Accent Line */}
+    
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -93,7 +90,7 @@ export default function About() {
           </span>
         </motion.div>
 
-        {/* Hero Content */}
+        
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 mb-32 lg:mb-48">
           <motion.div style={{ y: yHeadline }} className="lg:col-span-7 z-10">
             <motion.h2
@@ -133,7 +130,7 @@ export default function About() {
     overflow-hidden
   ">
 
-                {/* subtle gradient glow */}
+                
                 <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/5 to-transparent pointer-events-none" />
 
                 <div className="relative z-10">
@@ -154,7 +151,7 @@ export default function About() {
 
                 </div>
 
-                {/* micro accent */}
+                
                 <div className="absolute bottom-4 right-4 w-1.5 h-1.5 bg-[#D4AF37]/70 rounded-full" />
               </div>
             </motion.div>
@@ -188,7 +185,7 @@ export default function About() {
           </motion.div>
         </div>
 
-        {/* Elegant Divider */}
+        
         <motion.div
           initial={{ scaleX: 0, opacity: 0 }}
           whileInView={{ scaleX: 1, opacity: 1 }}
@@ -197,7 +194,7 @@ export default function About() {
           className="h-px bg-gradient-to-r from-transparent via-[#0A1A2F]/10 to-transparent w-full mb-32 origin-left"
         />
 
-        {/* Trust & Credibility Grid */}
+        
         <motion.div
           style={{
             y: yGrid,
@@ -233,7 +230,7 @@ export default function About() {
                 transition={{ duration: 0.9, delay: 0.1 * idx, ease: [0.22, 1, 0.36, 1] }}
                 className="group relative bg-white/40 backdrop-blur-sm border border-[#0A1A2F]/[0.04] p-8 lg:p-10 rounded-[1.5rem] transition-all duration-300 hover:bg-white hover:border-[#D4AF37]/20 hover:shadow-[0_15px_35px_-10px_rgba(10,26,47,0.06)] hover:-translate-y-1 overflow-hidden flex flex-col justify-between h-full min-h-[280px] transform-gpu will-change-transform"
               >
-                {/* Subtle Hover Glow behind the card */}
+                
                 <div className="absolute -inset-px bg-gradient-to-br from-[#D4AF37]/5 to-[#0A1A2F]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-[1.5rem] pointer-events-none" />
                 <div className="absolute inset-0 rounded-[1.5rem] bg-gradient-to-b from-white/40 to-transparent opacity-60 pointer-events-none" />
                 <div className="relative z-10">
@@ -251,7 +248,7 @@ export default function About() {
                   </p>
                 </div>
 
-                {/* Micro-interaction dot */}
+                  
                 <div className="absolute bottom-8 right-8 w-1.5 h-1.5 rounded-full bg-[#0A1A2F]/10 group-hover:bg-[#D4AF37]/80 group-hover:scale-150 transition-all duration-500 ease-out" />
               </motion.div>
             ))}

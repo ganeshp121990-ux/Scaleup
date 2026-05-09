@@ -12,95 +12,161 @@ const SERVICES = [
     title: "Bookkeeping",
     tag: "MTD 2026",
     accentHex: "#2F5B8C",
-
     short:
       "Digital bookkeeping and financial record keeping compliant with MTD 2026 requirements.",
-
     detail:
       "Accurate maintenance of business transactions, ledgers, and reconciliations using compliant cloud accounting systems.",
-
-    stat: {
-      value: "MTD",
-      label: "Compliant",
-    },
+    stat: { value: "MTD", label: "Compliant" },
   },
-
   {
     id: 1,
     index: "02",
     title: "VAT Services",
     tag: "HMRC VAT",
     accentHex: "#456B8C",
-
     short:
       "Preparation and submission of VAT returns using HMRC-compatible accounting software.",
-
     detail:
       "Support with VAT calculations, digital submissions, reporting obligations, and ongoing VAT compliance.",
-
-    stat: {
-      value: "VAT",
-      label: "Returns",
-    },
+    stat: { value: "VAT", label: "Returns" },
   },
-
   {
     id: 2,
     index: "03",
     title: "Payroll & RTI",
     tag: "PAYE",
     accentHex: "#3B6FA0",
-
     short:
       "Full payroll processing including PAYE calculations and RTI submissions to HMRC.",
-
     detail:
       "Management of employee payroll, pension deductions, statutory pay, and monthly Real Time Information reporting.",
-
-    stat: {
-      value: "RTI",
-      label: "Filed",
-    },
+    stat: { value: "RTI", label: "Filed" },
   },
-
   {
     id: 3,
     index: "04",
     title: "Financial Accounts",
     tag: "Year-End",
     accentHex: "#355C7D",
-
     short:
       "Preparation of year-end financial accounts for sole traders and partnerships.",
-
     detail:
       "Structured financial reporting prepared in line with UK accounting and tax requirements.",
-
-    stat: {
-      value: "AAT",
-      label: "Standard",
-    },
+    stat: { value: "AAT", label: "Standard" },
   },
-
   {
     id: 4,
     index: "05",
     title: "Management Accounts",
     tag: "Reporting",
     accentHex: "#4A6A88",
-
     short:
       "Monthly and quarterly management reports to support business decision-making.",
-
     detail:
       "Profit and loss reporting, cashflow visibility, and financial performance tracking for ongoing operational clarity.",
+    stat: { value: "Monthly", label: "Reports" },
+  },
 
-    stat: {
-      value: "Monthly",
-      label: "Reports",
-    },
+  // ───────────────── NEW SERVICES ─────────────────
+
+  {
+    id: 5,
+    index: "06",
+    title: "Personal Tax Return",
+    tag: "Self Assessment",
+    accentHex: "#2E5E8A",
+    short:
+      "Accurate preparation and filing of personal self-assessment tax returns.",
+    detail:
+      "Complete handling of income declarations, deductions, and HMRC submission for individuals.",
+    stat: { value: "SA", label: "Filed" },
+  },
+  {
+    id: 6,
+    index: "07",
+    title: "Business Income Tax",
+    tag: "Tax Planning",
+    accentHex: "#3A6C8F",
+    short:
+      "Computation and filing of business income tax obligations.",
+    detail:
+      "Strategic tax planning and accurate reporting for sole traders and partnerships.",
+    stat: { value: "Tax", label: "Optimised" },
+  },
+  {
+    id: 7,
+    index: "08",
+    title: "Corporate Tax Return",
+    tag: "CT600",
+    accentHex: "#2F5B8C",
+    short:
+      "Preparation and submission of corporate tax returns for limited companies.",
+    detail:
+      "Full CT600 filing support with compliance checks and HMRC submission.",
+    stat: { value: "CT", label: "Submitted" },
+  },
+  {
+    id: 8,
+    index: "09",
+    title: "Capital Gains Tax",
+    tag: "CGT",
+    accentHex: "#4B6F8C",
+    short:
+      "Calculation and reporting of capital gains from asset disposal.",
+    detail:
+      "Accurate CGT computations for property, shares, and investment disposals.",
+    stat: { value: "CGT", label: "Calculated" },
+  },
+  {
+    id: 9,
+    index: "10",
+    title: "Inheritance Tax",
+    tag: "IHT Planning",
+    accentHex: "#3B5F7A",
+    short:
+      "Support with inheritance tax planning and reporting.",
+    detail:
+      "Estate valuation, liability estimation, and HMRC compliance guidance.",
+    stat: { value: "IHT", label: "Managed" },
+  },
+  {
+    id: 10,
+    index: "11",
+    title: "Company Internal Audit",
+    tag: "Audit Review",
+    accentHex: "#355C7D",
+    short:
+      "Internal financial audits to ensure accuracy and compliance.",
+    detail:
+      "Independent review of accounting records, controls, and financial processes.",
+    stat: { value: "Audit", label: "Checked" },
+  },
+  {
+    id: 11,
+    index: "12",
+    title: "Company Secretarial Services",
+    tag: "Compliance",
+    accentHex: "#2F5B8C",
+    short:
+      "Full company compliance and statutory record management.",
+    detail:
+      "Maintenance of statutory registers, filings, and Companies House compliance.",
+    stat: { value: "CS", label: "Managed" },
+  },
+  {
+    id: 12,
+    index: "13",
+    title: "Business Analysis Services",
+    tag: "Growth Strategy",
+    accentHex: "#4A6A88",
+    short:
+      "Financial and operational analysis to improve business performance.",
+    detail:
+      "Data-driven insights, forecasting, and strategic advisory for business growth.",
+    stat: { value: "BI", label: "Insights" },
   },
 ];
+
 
 const TRUST_CHIPS = [
   "HMRC Compliant Systems",

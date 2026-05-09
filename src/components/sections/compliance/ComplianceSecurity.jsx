@@ -49,13 +49,13 @@ const METRICS = [
   "Professional Indemnity Covered",
 ];
 
-// Standardized easing to ensure Framer Motion stability
+
 const transitionSettings = { duration: 1.2, ease: [0.16, 1, 0.3, 1] };
 
 export default function ComplianceSecurity() {
   return (
-    <section className="relative w-full bg-[#07111F] text-slate-300 overflow-hidden py-24 md:py-32 lg:py-40">
-      {/* Subtle Enterprise Grid Background */}
+    <section id="compliance" className="relative w-full bg-[#07111F] text-slate-300 overflow-hidden py-24 md:py-32 lg:py-40">
+        
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.03]"
         style={{
@@ -152,7 +152,7 @@ export default function ComplianceSecurity() {
                 }}
                 className="group relative flex flex-col justify-between h-full p-8 md:p-10 lg:p-12 bg-white/[0.01] border border-white/[0.04] backdrop-blur-md transition-all duration-700 hover:bg-white/[0.02] hover:border-[#8FA7BF]/30"
               >
-                {/* Hover Accent Line */}
+                  
                 <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-[#8FA7BF]/0 via-[#8FA7BF]/40 to-[#8FA7BF]/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-1000 ease-in-out origin-left" />
 
                 <div>

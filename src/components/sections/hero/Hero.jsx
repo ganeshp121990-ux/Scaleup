@@ -66,14 +66,13 @@ export default function Hero() {
 
   const lightY = useTransform(smooth, [0, 1], ["0%", "10%"]);
 
-  // Layer 3 — Grain / grid (fastest)
-  const grainY = useTransform(smooth, [0, 1], ["0%", "18%"]);
+    const grainY = useTransform(smooth, [0, 1], ["0%", "18%"]);
 
-  // Text — exits late
+    
   const txtY = useTransform(smooth, [0, 1], ["0%", "12%"]);
   const txtOpacity = useTransform(smooth, [0, 0.55, 1], [1, 1, 0]);
 
-  /* ── Text stagger delays (relative to phase 2) ── */
+  
   const tagDelay = 0.1;
   const headDelay = 0.4;
   const subDelay = 1.0;
@@ -86,11 +85,7 @@ export default function Hero() {
       id="home"
       className="relative min-h-[100lvh] flex items-center justify-center overflow-hidden bg-[#FAFBFA]"
     >
-      {/* ═══════════════════════════════════════════════════════
-          LAYER 1 — BACKGROUND VIDEO (slowest parallax)
-          Lens-focus: starts at 12px blur, sharpens to 0.
-          mix-blend-multiply fuses video into white environment.
-          ═══════════════════════════════════════════════════════ */}
+      
       <motion.div
         style={{ scale: vidScale, y: vidY }}
         className="absolute inset-[-4%] pointer-events-none will-change-transform"
@@ -116,7 +111,7 @@ export default function Hero() {
           </video>
         </motion.div>
 
-        {/* Feathered edges — minimal, just prevents hard video boundaries */}
+          
         <div
           className="absolute inset-0"
           style={{
@@ -127,10 +122,7 @@ export default function Hero() {
         />
       </motion.div>
 
-      {/* ═══════════════════════════════════════════════════════
-          LAYER 2 — LIGHT OVERLAYS (medium parallax)
-          Soft ambient radial glows + breathing opacity
-          ═══════════════════════════════════════════════════════ */}
+      
       <motion.div
         style={{ y: lightY, opacity: useTransform(idleBreath, (v) => v * 0.92) }}
         className="absolute inset-0 pointer-events-none will-change-transform"
@@ -149,7 +141,7 @@ export default function Hero() {
               "radial-gradient(circle, rgba(253,250,244,0.88) 0%, transparent 60%)",
           }}
         />
-        {/* Warm accent — barely visible */}
+        
         <div
           className="absolute top-[15%] left-[35%] w-[40vw] h-[30vw] rounded-full opacity-50"
           style={{
@@ -159,15 +151,12 @@ export default function Hero() {
         />
       </motion.div>
 
-      {/* ═══════════════════════════════════════════════════════
-          LAYER 3 — GRAIN + GRID (fastest parallax)
-          Film texture for cinematic depth
-          ═══════════════════════════════════════════════════════ */}
+      
       <motion.div
         style={{ y: grainY }}
         className="absolute inset-0 pointer-events-none will-change-transform"
       >
-        {/* Film grain via inline SVG noise */}
+        
         <div
           className="absolute inset-0 opacity-[0.026]"
           style={{
@@ -176,7 +165,7 @@ export default function Hero() {
             backgroundSize: "128px 128px",
           }}
         />
-        {/* Architectural grid */}
+       
         <div
           className="absolute inset-0 opacity-[0.016]"
           style={{
@@ -192,16 +181,12 @@ export default function Hero() {
         />
       </motion.div>
 
-      {/* ═══════════════════════════════════════════════════════
-          CONTENT LAYER — Text, CTA, Trust
-          Only appears after scene has focused (phase 2).
-          Idle micro-drift for alive feeling.
-          ═══════════════════════════════════════════════════════ */}
+      
       <motion.div
         style={{ y: txtY, opacity: txtOpacity, translateY: idleDrift }}
         className="relative z-10 pt-36 pb-24 md:pt-52 md:pb-36 text-center px-6 max-w-5xl mx-auto w-full will-change-transform"
       >
-        {/* ── Tagline ── */}
+        
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={phase === 2 ? { opacity: 1, y: 0 } : {}}
@@ -215,7 +200,7 @@ export default function Hero() {
           <span className="h-px w-6 md:w-12 bg-deepBlue/15" />
         </motion.div>
 
-        {/* ── Headline: micro-scale 0.96 → 1.03 → 1 + light sweep ── */}
+        
         <motion.h1
           initial={{ opacity: 0, y: 32, scale: 0.96 }}
           animate={
@@ -233,7 +218,7 @@ export default function Hero() {
           Strategic Accounting &<br className="hidden md:block" />
           <span className="relative inline-block overflow-hidden">
             <span className="relative z-10"> Talent Solutions for UK Growth</span>
-            {/* Natural light reflection sweep — very subtle */}
+            
             <motion.span
               initial={{ x: "-120%" }}
               animate={phase === 2 ? { x: "240%" } : {}}
@@ -253,7 +238,7 @@ export default function Hero() {
           </span>
         </motion.h1>
 
-        {/* ── Subtext ── */}
+        
         <motion.p
           initial={{ opacity: 0, y: 18 }}
           animate={phase === 2 ? { opacity: 1, y: 0 } : {}}
@@ -262,14 +247,14 @@ export default function Hero() {
         >
           Professional bookkeeping, tax compliance, and Recruitment Process Outsourcing (RPO) delivered by AAT Licensed Accountants.
         </motion.p>
-        {/* ── CTA Buttons — tactile, premium ── */}
+        
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           animate={phase === 2 ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.4, ease: EASE, delay: ctaDelay }}
           className="flex flex-col sm:flex-row gap-4 sm:gap-5 mt-8 md:mt-10 justify-center items-center"
         >
-          {/* Primary */}
+          
           <button
             onClick={() => scrollTo("contact")}
             className="group relative px-9 py-[14px] bg-deepBlue text-white text-[13px] font-medium
@@ -298,7 +283,7 @@ export default function Hero() {
             </span>
           </button>
 
-          {/* Secondary */}
+          
           <button
             onClick={() => scrollTo("services")}
             className="group relative px-9 py-[14px] text-deepBlue text-[13px] font-medium
@@ -318,52 +303,74 @@ export default function Hero() {
 
 
 
-        {/* ── Trust footer ── */}
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={phase === 2 ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.2, ease: EASE, delay: trustDelay }}
           className="mt-16 flex justify-center"
         >
-          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6">
+          <div className="mt-16 flex justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-center">
 
-            {/* AAT */}
-            <div className="flex items-center gap-3 px-5 py-3 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
-              <img src="/logos/aat.svg" className="h-7 w-auto" />
-              <div className="text-left leading-tight">
-                <p className="text-[11px] font-semibold text-deepBlue">AAT</p>
-                <p className="text-[10px] text-gray-500">LICENSED MEMBER</p>
+              {/* AAT */}
+              <div className="flex items-center justify-center gap-3 px-5 py-3 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                <Image src="/logos/aat.svg" alt="AAT" width={28} height={28} />
+                <div className="leading-tight">
+                  <p className="text-[11px] font-semibold text-deepBlue">AAT</p>
+                  <p className="text-[10px] text-gray-500">LICENSED</p>
+                </div>
               </div>
-            </div>
 
-            {/* ICO */}
-            <div className="flex items-center gap-3 px-5 py-3 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
-              <img src="/logos/ico.svg" className="h-7 w-auto" />
-              <div className="text-left leading-tight">
-                <p className="text-[11px] font-semibold text-deepBlue">ICO</p>
-                <p className="text-[10px] text-gray-500">REGISTERED</p>
+              {/* ICO */}
+              <div className="flex items-center justify-center gap-3 px-5 py-3 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                <Image src="/logos/ico.svg" alt="ICO" width={28} height={28} />
+                <div className="leading-tight">
+                  <p className="text-[11px] font-semibold text-deepBlue">ICO</p>
+                  <p className="text-[10px] text-gray-500">REGISTERED</p>
+                </div>
               </div>
-            </div>
 
-            {/* XERO */}
-            <div className="flex items-center gap-3 px-5 py-3 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
-              <img src="/logos/xero.svg" className="h-7 w-auto" />
-              <div className="text-left leading-tight">
-                <p className="text-[11px] font-semibold text-deepBlue">Xero</p>
-                <p className="text-[10px] text-gray-500">PARTNER</p>
+              {/* Xero */}
+              <div className="flex items-center justify-center gap-3 px-5 py-3 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                <Image src="/logos/xero.svg" alt="Xero" width={28} height={28} />
+                <div className="leading-tight">
+                  <p className="text-[11px] font-semibold text-deepBlue">Xero</p>
+                  <p className="text-[10px] text-gray-500">PARTNER</p>
+                </div>
               </div>
-            </div>
 
-            {/* QUICKBOOKS */}
-            <div className="flex items-center gap-3 px-5 py-3 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
-              <img src="/logos/quickbooks.svg" className="h-7 w-auto" />
-              <div className="text-left leading-tight">
-                <p className="text-[11px] font-semibold text-deepBlue">QuickBooks</p>
-                <p className="text-[10px] text-gray-500">PARTNER</p>
+              {/* QuickBooks */}
+              <div className="flex items-center justify-center gap-3 px-5 py-3 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                <Image src="/logos/quickbooks.svg" alt="QuickBooks" width={28} height={28} />
+                <div className="leading-tight">
+                  <p className="text-[11px] font-semibold text-deepBlue">QuickBooks</p>
+                  <p className="text-[10px] text-gray-500">PARTNER</p>
+                </div>
               </div>
-            </div>
 
+              {/* FreeAgent Certified (NEW) */}
+              <div className="flex items-center justify-center gap-3 px-5 py-3 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                <Image src="/logos/freeagent.svg" alt="FreeAgent" width={28} height={28} />
+                <div className="leading-tight">
+                  <p className="text-[11px] font-semibold text-deepBlue">FreeAgent</p>
+                  <p className="text-[10px] text-gray-500">CERTIFIED</p>
+                </div>
+              </div>
+
+              {/* Sage 50 Certified (NEW) */}
+              <div className="flex items-center justify-center gap-3 px-5 py-3 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition">
+                <Image src="/logos/sage50.svg" alt="Sage 50" width={28} height={28} />
+                <div className="leading-tight">
+                  <p className="text-[11px] font-semibold text-deepBlue">Sage 50</p>
+                  <p className="text-[10px] text-gray-500">CERTIFIED</p>
+                </div>
+              </div>
+
+            </div>
           </div>
+
+
         </motion.div>
       </motion.div>
     </section >

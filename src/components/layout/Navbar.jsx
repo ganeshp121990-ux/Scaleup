@@ -2,36 +2,35 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState, useCallback } from "react";
 
-/* ─────────────────────────────────────────────────────────────
-   NAVBAR — "Floating Precision Bar"
-   Emerges with the hero's focus moment (~1.8s after mount).
-   Transparent at top → soft glass surface on scroll.
-   ───────────────────────────────────────────────────────────── */
 
 const EASE = [0.2, 1, 0.2, 1];
 
-const NAV_LINKS = ["Home", "About", "Services", "Process", "Testimonials", "Contact"];
+const NAV_LINKS = [
+  "Home",
+  "About",
+  "Services",
+  "Compliance",
+  "RPO",
+  "Contact",
+];
 
 export default function Navbar() {
-  const [visible, setVisible] = useState(false);   // synced to hero focus
-  const [scrolled, setScrolled] = useState(false);  // glass surface trigger
+  const [visible, setVisible] = useState(false);  
+  const [scrolled, setScrolled] = useState(false); 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
-  /* ── Sync entrance with hero's focus moment ── */
+
   useEffect(() => {
-    // Hero phase 1 (focus) starts at 400ms, resolves ~1.4s later.
-    // Navbar emerges as the scene sharpens — ~1800ms after mount.
+
     const t = setTimeout(() => setVisible(true), 1800);
     return () => clearTimeout(t);
   }, []);
 
-  /* ── Scroll: glass surface + active section tracking ── */
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 40);
 
-      // Track which section is in view
       const sections = NAV_LINKS.map((l) => l.toLowerCase());
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
@@ -46,7 +45,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  /* ── Lock scroll when mobile menu open ── */
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
@@ -59,7 +57,7 @@ export default function Navbar() {
 
   return (
     <>
-      {/* ═══════════════════ DESKTOP NAV BAR ═══════════════════ */}
+     
       <motion.nav
         initial={{ opacity: 0 }}
         animate={visible ? { y: 0, opacity: 1 } : { y: -20, opacity: 0 }}
@@ -72,7 +70,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
 
-          {/* ── Logo — clean, no heavy container ── */}
+          
           <a
             href="#home"
             onClick={(e) => { e.preventDefault(); scrollTo("home"); }}
@@ -86,7 +84,7 @@ export default function Navbar() {
             />
           </a>
 
-          {/* ── Desktop Links ── */}
+
           <div className="hidden md:flex items-center gap-10 text-[13px] tracking-[0.02em]">
             {NAV_LINKS.map((item) => {
               const id = item.toLowerCase();
@@ -98,7 +96,7 @@ export default function Navbar() {
                   onClick={(e) => { e.preventDefault(); scrollTo(id); }}
                   className="group relative py-1 font-body font-normal transition-all duration-500 ease-[cubic-bezier(0.2,1,0.2,1)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A96A] focus-visible:ring-offset-2 rounded-sm"
                 >
-                  {/* Label with upward micro-shift on hover */}
+               
                   <span
                     className={`inline-block transition-all duration-500 ease-[cubic-bezier(0.2,1,0.2,1)]
                       group-hover:-translate-y-[1.5px]
@@ -106,7 +104,7 @@ export default function Navbar() {
                   >
                     {item}
                   </span>
-                  {/* Underline — expands from center with delay */}
+                 
                   <span
                     className={`absolute -bottom-[2px] left-1/2 -translate-x-1/2 h-[1px] bg-deepBlue/40
                       transition-all duration-500 ease-[cubic-bezier(0.2,1,0.2,1)] delay-75
@@ -117,7 +115,7 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* ── CTA — matches hero button system ── */}
+          
           <button
             onClick={() => scrollTo("contact")}
             className="group relative hidden md:block px-7 py-[10px] bg-deepBlue text-white text-[12px] font-medium
@@ -136,7 +134,7 @@ export default function Navbar() {
             </span>
           </button>
 
-          {/* ── Mobile Hamburger ── */}
+         
           <button
             onClick={() => setMobileOpen((v) => !v)}
             aria-expanded={mobileOpen}
@@ -163,9 +161,7 @@ export default function Navbar() {
         </div>
       </motion.nav>
 
-      {/* ═══════════════════ MOBILE FULLSCREEN MENU ═══════════════════
-          Scales + fades into view — feels like mode change, not panel.
-          ═══════════════════════════════════════════════════════════════ */}
+      
       <AnimatePresence>
         {mobileOpen && (
           <motion.div

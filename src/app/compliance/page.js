@@ -11,7 +11,7 @@ export default function CompliancePage() {
   return (
     <main className="bg-[#FDFCFB] text-[#0A1A2F]">
       <Navbar />
-      
+
       <section className="relative pt-40 pb-20 md:pt-48 md:pb-32 px-5 lg:px-12 max-w-[86rem] mx-auto min-h-[80vh]">
         <div className="max-w-3xl mb-16 md:mb-24">
           <div className="flex items-center gap-4 mb-8">
@@ -34,11 +34,11 @@ export default function CompliancePage() {
         </div>
 
         <div className="space-y-12 md:space-y-16 max-w-4xl">
-          {/* Section: AML */}
+
           <div className="bg-white rounded-[2rem] p-8 md:p-12 border border-[#0A1A2F]/[0.05] shadow-[0_20px_50px_-20px_rgba(10,26,47,0.04)]">
             <h2 className="text-2xl md:text-3xl font-medium font-heading mb-4 text-[#0A1A2F]">Anti-Money Laundering (AML)</h2>
             <p className="text-[#0A1A2F]/70 leading-[1.8] font-light mb-6">
-              ScaleUp Accounting Ltd is supervised by the Association of Accounting Technicians (AAT) for the purposes of the Money Laundering Regulations. 
+              ScaleUp Accounting Ltd is supervised by the Association of Accounting Technicians (AAT) for the purposes of the Money Laundering Regulations.
               We are legally obligated to apply strict customer due diligence (CDD) and Know Your Customer (KYC) measures before undertaking any business relationship.
             </p>
             <p className="text-[#0A1A2F]/70 leading-[1.8] font-light">
@@ -46,11 +46,11 @@ export default function CompliancePage() {
             </p>
           </div>
 
-          {/* Section: GDPR */}
+
           <div className="bg-white rounded-[2rem] p-8 md:p-12 border border-[#0A1A2F]/[0.05] shadow-[0_20px_50px_-20px_rgba(10,26,47,0.04)]">
             <h2 className="text-2xl md:text-3xl font-medium font-heading mb-4 text-[#0A1A2F]">UK GDPR 2026 & Data Use</h2>
             <p className="text-[#0A1A2F]/70 leading-[1.8] font-light mb-6">
-              In accordance with the Data Use and Access Act and UK GDPR 2026 legislative requirements, we implement "Privacy by Design" across all our financial frameworks. 
+              In accordance with the Data Use and Access Act and UK GDPR 2026 legislative requirements, we implement "Privacy by Design" across all our financial frameworks.
               Your data is processed strictly for the execution of our contracted services.
             </p>
             <p className="text-[#0A1A2F]/70 leading-[1.8] font-light">
@@ -58,7 +58,7 @@ export default function CompliancePage() {
             </p>
           </div>
 
-          {/* Section: PII */}
+
           <div className="bg-white rounded-[2rem] p-8 md:p-12 border border-[#0A1A2F]/[0.05] shadow-[0_20px_50px_-20px_rgba(10,26,47,0.04)]">
             <h2 className="text-2xl md:text-3xl font-medium font-heading mb-4 text-[#0A1A2F]">Professional Indemnity Insurance</h2>
             <p className="text-[#0A1A2F]/70 leading-[1.8] font-light mb-6">

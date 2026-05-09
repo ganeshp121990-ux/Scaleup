@@ -58,7 +58,7 @@ export default function ContactSection() {
     setLoading(false);
   };
 
-  // Structured Corporate Transitions
+  
   const stepVariants = {
     initial: { opacity: 0, x: 10 },
     animate: { opacity: 1, x: 0 },
@@ -68,7 +68,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="relative w-full bg-[#F7F8FA] text-[#0A1A2F] py-20 md:py-28 px-5 lg:px-12 overflow-hidden border-t border-slate-200">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
-      {/* ── Subtle Corporate Background Pattern ── */}
+      
       <div
         className="absolute inset-0 opacity-5 pointer-events-none"
         style={{
@@ -80,7 +80,7 @@ export default function ContactSection() {
 
       <div className="relative z-10 max-w-[80rem] mx-auto grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-start">
 
-        {/* ── LEFT COLUMN: Text & Trust Signals ── */}
+        
         <div className="pt-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -136,7 +136,7 @@ export default function ContactSection() {
             <div className="flex flex-col gap-1.5">
               <span className="text-xs tracking-wider font-semibold uppercase text-slate-500">Direct Contact</span>
               <p className="text-sm font-medium text-[#0A1A2F]">
-                +44 20 7946 0958
+                074449 55555
               </p>
               <p className="text-sm font-medium text-[#0A1A2F]">
                 info@yourfirmname.co.uk
@@ -144,7 +144,7 @@ export default function ContactSection() {
             </div>
           </motion.div>
 
-          {/* Regulated Trust Signals */}
+          
           <motion.ul
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -173,7 +173,7 @@ export default function ContactSection() {
           </motion.ul>
         </div>
 
-        {/* ── RIGHT COLUMN: Structured Form Card ── */}
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -181,7 +181,7 @@ export default function ContactSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div className="bg-white border border-slate-200 rounded-xl shadow-lg overflow-hidden relative">
-            {/* ── Solid Progress Bar ── */}
+            
             <div className="absolute top-0 left-0 w-full h-[4px] bg-slate-100 z-20">
               <motion.div
                 className="h-full bg-[#0A1A2F]"
@@ -193,7 +193,7 @@ export default function ContactSection() {
 
             <div className="relative z-10 p-8 md:p-10 min-h-[500px] flex flex-col">
 
-              {/* Card Header & Step Indicators */}
+              
               <div className="flex items-end justify-between mb-8 pb-6 border-b border-slate-100">
                 <div>
                   <div className="flex items-center gap-3 mb-3">
@@ -228,11 +228,11 @@ export default function ContactSection() {
                 )}
               </div>
 
-              {/* ── Form Body ── */}
+              
               <div className="relative flex-grow">
                 <AnimatePresence mode="popLayout" custom={step}>
 
-                  {/* STEP 1: SERVICES */}
+                  
                   {step === 1 && (
                     <motion.div key="step1" variants={stepVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.4 }} className="space-y-3">
                       {services.map(s => (
@@ -250,7 +250,7 @@ export default function ContactSection() {
                     </motion.div>
                   )}
 
-                  {/* STEP 2: DATE & TIME */}
+                  
                   {step === 2 && (
                     <motion.div key="step2" variants={stepVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.4 }}>
                       <div className="grid grid-cols-3 sm:grid-cols-4 gap-3 mb-6">
@@ -315,7 +315,7 @@ export default function ContactSection() {
                     </motion.div>
                   )}
 
-                  {/* STEP 3: DETAILS */}
+                  
                   {step === 3 && (
                     <motion.form
                       key="step3"
@@ -323,7 +323,7 @@ export default function ContactSection() {
                       onSubmit={handleSubmit}
                       className="space-y-5"
                     >
-                      {/* Summary Container */}
+                      
                       <div className="bg-slate-50 border border-slate-200 p-4 rounded-md mb-6">
                         <div className="text-sm text-[#0A1A2F] font-semibold mb-2">
                           {booking.service}
@@ -394,7 +394,7 @@ export default function ContactSection() {
                     </motion.form>
                   )}
 
-                  {/* STEP 4: SUCCESS */}
+                  
                   {step === 4 && (
                     <motion.div
                       key="step4"

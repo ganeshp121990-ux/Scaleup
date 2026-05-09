@@ -56,14 +56,12 @@ const itemVariants = {
   },
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   COMPONENTS
-═══════════════════════════════════════════════════════════════ */
+
 
 export default function RPOAdvisorySection() {
   return (
-    <section className="relative w-full bg-[#07111F] text-slate-300 overflow-hidden py-24 md:py-32 lg:py-40">
-      {/* Subtle Enterprise Grid Background */}
+    <section id="rpo" className="relative w-full bg-[#07111F] text-slate-300 overflow-hidden py-24 md:py-32 lg:py-40">
+
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.03]"
         style={{
@@ -76,7 +74,7 @@ export default function RPOAdvisorySection() {
         aria-hidden="true"
       />
 
-      {/* Soft Ambient Light (Cinematic but restrained) */}
+
       <div
         className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.03),transparent_55%)] pointer-events-none"
         aria-hidden="true"
@@ -90,7 +88,7 @@ export default function RPOAdvisorySection() {
           viewport={{ once: true, margin: "-100px" }}
           className="flex flex-col"
         >
-          {/* Section Header */}
+
           <div className="max-w-4xl mb-20 md:mb-28">
             <motion.div variants={itemVariants} className="flex items-center gap-4 mb-8">
               <span className="w-12 h-[1px] bg-slate-500" aria-hidden="true" />
@@ -119,7 +117,7 @@ export default function RPOAdvisorySection() {
             </motion.p>
           </div>
 
-          {/* Services Grid */}
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-20">
             {SERVICES.map((service, index) => (
               <motion.article
@@ -127,7 +125,7 @@ export default function RPOAdvisorySection() {
                 variants={itemVariants}
                 className="group relative flex flex-col justify-between h-full p-8 md:p-10 lg:p-12 bg-white/[0.02] border border-white/[0.06] backdrop-blur-sm transition-colors duration-500 hover:bg-white/[0.04]"
               >
-                {/* Top Accent Line */}
+
                 <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-[#355C7D]/0 via-[#355C7D]/50 to-[#355C7D]/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-1000 ease-in-out" />
 
                 <div>
@@ -142,7 +140,7 @@ export default function RPOAdvisorySection() {
                   </p>
                 </div>
 
-                {/* Decorative Bottom Corner Frame */}
+
                 <div className="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-white/10 m-6 transition-colors duration-500 group-hover:border-[#355C7D]/40" aria-hidden="true" />
               </motion.article>
             ))}
@@ -194,7 +192,7 @@ export default function RPOAdvisorySection() {
             </div>
           </motion.div>
 
-          {/* Trust Metrics / Footer Line */}
+
           <motion.div
             variants={itemVariants}
             className="flex flex-col md:flex-row items-start md:items-center justify-between py-8 border-t border-white/[0.06]"
