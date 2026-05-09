@@ -59,8 +59,8 @@ export default function Footer() {
                   London Office
                 </span>
                 <span className="text-[14px] text-slate-300 font-light leading-relaxed">
-                  120 Moorgate<br />
-                  London, EC2M 6UR
+                  <br />
+                  London
                 </span>
               </div>
 
@@ -69,7 +69,7 @@ export default function Footer() {
                   Direct Inquiries
                 </span>
                 <span className="text-[14px] text-slate-300 font-light mb-1">
-                  +44 (0) 20 7946 0958
+                  074449 55555
                 </span>
                 <button
                   onClick={handleCopyEmail}
