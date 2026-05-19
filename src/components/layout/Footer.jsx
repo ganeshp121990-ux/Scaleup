@@ -96,7 +96,7 @@ export default function Footer() {
                         exit={{ opacity: 0 }}
                         className="flex items-center gap-2"
                       >
-                        advisory@scaleupaccounting.co.uk
+                        info@scaleupaccounting.uk
                         <span className="absolute -bottom-1 left-0 w-full h-[1px] bg-white/20 group-hover:bg-white/60 transition-colors duration-300" />
                       </motion.span>
                     )}
@@ -174,7 +174,7 @@ tracking-[0.01em] font-medium text-[#F8FAFC] mb-6">
                 Connect
               </h3>
               <a
-                href="https://linkedin.com/company/scaleupaccounting"
+                href="https://LinkedIn.com/company/scaleupaccountingltd/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-[14px] font-light text-slate-500 hover:text-white transition-colors duration-300 w-fit focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07111F] rounded-sm py-1"

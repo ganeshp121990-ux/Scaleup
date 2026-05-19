@@ -15,16 +15,96 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "ScaleUp Accounting Limited | Smart Accounting for Scaling Businesses",
+  metadataBase: new URL("https://www.scaleupaccounting.uk"),
+
+  title: {
+    default:
+      "ScaleUp Accounting Limited | Strategic Accounting & UK Business Advisory",
+    template: "%s | ScaleUp Accounting",
+  },
+
   description:
-    "ScaleUp Accounting Limited is a UK-based accounting firm helping growing businesses with smart, scalable financial solutions, tax planning, and compliance.",
+    "Professional bookkeeping, tax compliance, payroll, VAT, and Recruitment Process Outsourcing (RPO) services for UK businesses.",
+
   keywords: [
     "accounting firm UK",
-    "chartered accountant UK",
+    "bookkeeping services UK",
     "tax services UK",
-    "business accounting",
-    "scaleup accounting"
+    "VAT returns UK",
+    "payroll services UK",
+    "RPO accounting",
+    "AAT licensed accountants",
+    "scaleup accounting",
   ],
+
+  authors: [{ name: "ScaleUp Accounting Limited" }],
+
+  creator: "ScaleUp Accounting Limited",
+
+  publisher: "ScaleUp Accounting Limited",
+
+  applicationName: "ScaleUp Accounting",
+
+  category: "Accounting Services",
+
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      {
+        url: "/favicon-96x96.png",
+        sizes: "96x96",
+        type: "image/png",
+      },
+    ],
+
+    apple: "/apple-touch-icon.png",
+
+    other: [
+      {
+        rel: "manifest",
+        url: "/site.webmanifest",
+      },
+    ],
+  },
+
+  openGraph: {
+    title:
+      "ScaleUp Accounting Limited | Strategic Accounting & UK Business Advisory",
+
+    description:
+      "Professional bookkeeping, tax compliance, payroll, VAT, and Recruitment Process Outsourcing (RPO) services for UK businesses.",
+
+    url: "https://www.scaleupaccounting.uk",
+
+    siteName: "ScaleUp Accounting",
+
+    locale: "en_GB",
+
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title:
+      "ScaleUp Accounting Limited | Strategic Accounting & UK Business Advisory",
+
+    description:
+      "Professional bookkeeping, tax compliance, payroll, VAT, and RPO services for UK businesses.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
