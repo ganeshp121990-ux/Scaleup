@@ -6,7 +6,15 @@ export async function POST(req) {
   try {
     const body = await req.json();
 
-    const { service, date, time, name, email, phone, notes } = body;
+    const {
+      service,
+      date,
+      time,
+      name,
+      email,
+      phone,
+      notes,
+    } = body;
 
     const data = await resend.emails.send({
       from: "Scaleup Accounting <info@scaleupaccounting.uk>",
@@ -15,8 +23,7 @@ export async function POST(req) {
       reply_to: email,
 
       html: `
-        <div style="font-family: Arial; padding: 20px; background:#f7f8fa;">
-          
+        <div style="font-family:Arial;padding:20px;background:#f7f8fa;">
           <div style="max-width:600px;margin:auto;background:white;padding:20px;border-radius:10px;">
             
             <h2 style="color:#0A1A2F;">New Consultation Request</h2>
@@ -42,12 +49,22 @@ export async function POST(req) {
       `,
     });
 
-    return Response.json({ success: true, data });
+    return Response.json({
+      success: true,
+      data,
+    });
 
   } catch (error) {
+    console.error(error);
+
     return Response.json(
-      { success: false, error: error.message },
-      { status: 500 }
+      {
+        success: false,
+        error: error.message,
+      },
+      {
+        status: 500,
+      }
     );
   }
 }
