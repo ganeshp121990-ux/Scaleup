@@ -48,23 +48,8 @@ export const metadata = {
   category: "Accounting Services",
 
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      {
-        url: "/favicon-96x96.png",
-        sizes: "96x96",
-        type: "image/png",
-      },
-    ],
-
+    icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
-
-    other: [
-      {
-        rel: "manifest",
-        url: "/site.webmanifest",
-      },
-    ],
   },
 
   openGraph: {
@@ -105,6 +90,10 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
+};
+
+export const viewport = {
+  themeColor: "#0A1A2F",
 };
 
 export default function RootLayout({ children }) {
