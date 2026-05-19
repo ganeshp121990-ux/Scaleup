@@ -51,15 +51,29 @@ export default function ContactSection() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+
     try {
-      await new Promise((res) => setTimeout(res, 1200));
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(booking),
+      });
+
+      const data = await res.json();
+
+      if (!data.success) throw new Error(data.error);
+
       setStep(4);
+
     } catch (err) {
-      alert("Error confirming booking");
+      alert("Failed to send message");
+      console.error(err);
     }
+
     setLoading(false);
   };
-
 
   const stepVariants = {
     initial: { opacity: 0, x: 10 },
@@ -141,7 +155,7 @@ export default function ContactSection() {
                 074449 55555
               </p>
               <p className="text-sm font-medium text-[#0A1A2F]">
-                info@yourfirmname.co.uk
+                info@scaleupaccounting.uk
               </p>
             </div>
           </motion.div>

@@ -15,8 +15,8 @@ const NAV_LINKS = [
 ];
 
 export default function Navbar() {
-  const [visible, setVisible] = useState(false);  
-  const [scrolled, setScrolled] = useState(false); 
+  const [visible, setVisible] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
@@ -57,7 +57,7 @@ export default function Navbar() {
 
   return (
     <>
-     
+
       <motion.nav
         initial={{ opacity: 0 }}
         animate={visible ? { y: 0, opacity: 1 } : { y: -20, opacity: 0 }}
@@ -70,14 +70,14 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
 
-          
+
           <a
             href="#home"
             onClick={(e) => { e.preventDefault(); scrollTo("home"); }}
             className="relative group"
           >
             <img
-              src="/logo.png"
+              src="/Logo.svg"
               alt="ScaleUp Logo"
               className={`h-8 md:h-9 w-auto object-contain transition-all duration-700 ease-[cubic-bezier(0.2,1,0.2,1)]
                 ${scrolled ? "opacity-90" : "opacity-80"}`}
@@ -96,7 +96,7 @@ export default function Navbar() {
                   onClick={(e) => { e.preventDefault(); scrollTo(id); }}
                   className="group relative py-1 font-body font-normal transition-all duration-500 ease-[cubic-bezier(0.2,1,0.2,1)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A96A] focus-visible:ring-offset-2 rounded-sm"
                 >
-               
+
                   <span
                     className={`inline-block transition-all duration-500 ease-[cubic-bezier(0.2,1,0.2,1)]
                       group-hover:-translate-y-[1.5px]
@@ -104,7 +104,7 @@ export default function Navbar() {
                   >
                     {item}
                   </span>
-                 
+
                   <span
                     className={`absolute -bottom-[2px] left-1/2 -translate-x-1/2 h-[1px] bg-deepBlue/40
                       transition-all duration-500 ease-[cubic-bezier(0.2,1,0.2,1)] delay-75
@@ -115,7 +115,7 @@ export default function Navbar() {
             })}
           </div>
 
-          
+
           <button
             onClick={() => scrollTo("contact")}
             className="group relative hidden md:block px-7 py-[10px] bg-deepBlue text-white text-[12px] font-medium
@@ -134,7 +134,7 @@ export default function Navbar() {
             </span>
           </button>
 
-         
+
           <button
             onClick={() => setMobileOpen((v) => !v)}
             aria-expanded={mobileOpen}
@@ -161,7 +161,7 @@ export default function Navbar() {
         </div>
       </motion.nav>
 
-      
+
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
