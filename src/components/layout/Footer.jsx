@@ -192,7 +192,7 @@ tracking-[0.01em] font-medium text-[#F8FAFC] mb-6">
 
           <div className="flex flex-col gap-6 max-w-3xl">
             <p className="text-[12px] text-slate-500 font-light leading-[1.7]">
-              ScaleUp Accounting Ltd is a limited company registered in England and Wales. Registered number: 11223344.
+              ScaleUp Accounting Ltd is a limited company registered in England and Wales.
               Registered office: 120 Moorgate, London, EC2M 6UR. Company No. 17121237. <br className="hidden md:block" />
               Licensed and regulated by the Association of Accounting Technicians (AAT) under licence number 98765. Details of our professional registration can be viewed at <a href="https://www.aat.org.uk/" target="_blank" rel="noopener noreferrer" className="underline decoration-slate-600 hover:text-slate-200 transition-colors">aat.org.uk</a>.
             </p>
