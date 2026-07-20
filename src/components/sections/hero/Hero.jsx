@@ -105,6 +105,9 @@ export default function Hero() {
             loop
             muted
             playsInline
+            poster="/hero-poster.jpg"
+            preload="metadata"
+            aria-hidden="true"
             className="w-full h-full object-cover mix-blend-multiply opacity-[0.28] contrast-[1.05] saturate-[0.75]"
           >
             <source src="/hero-video.mp4" type="video/mp4" />

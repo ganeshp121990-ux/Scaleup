@@ -50,7 +50,7 @@ export default function Footer() {
             </h2>
 
             <p className="text-[14px] text-slate-500 font-light leading-[1.8] mb-10 max-w-sm">
-              A leading London-based firm of Chartered Accountants, providing strategic financial advisory, corporate structuring, and compliance services to growing enterprises.
+              London-based AAT Licensed Accounting Practice providing bookkeeping, tax, payroll, and VAT services for UK businesses.
             </p>
 
             <div className="flex flex-col gap-8">
@@ -68,9 +68,12 @@ export default function Footer() {
                 <span className="text-[11px] uppercase tracking-[0.1em] font-medium text-slate-500">
                   Direct Inquiries
                 </span>
-                <span className="text-[14px] text-slate-300 font-light mb-1">
+                <a
+                  href="tel:07444955555"
+                  className="text-[14px] text-slate-300 font-light mb-1 hover:text-white transition-colors duration-300"
+                >
                   074449 55555
-                </span>
+                </a>
                 <button
                   onClick={handleCopyEmail}
                   className="text-[14px] text-slate-300 font-light hover:text-white transition-colors duration-300 text-left w-fit relative group focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07111F] rounded-sm py-1"
@@ -114,19 +117,20 @@ tracking-[0.01em] font-medium text-[#F8FAFC] mb-6">
             </h3>
             <ul className="flex flex-col gap-3.5">
               {[
-                { label: "Corporate Tax & Structuring", id: "services" },
-                { label: "Audit & Assurance", id: "services" },
-                { label: "Outsourced Finance Function", id: "services" },
-                { label: "Payroll & Compliance", id: "services" },
-                { label: "Private Client Advisory", id: "services" }
+                { label: "Bookkeeping", href: "/services/bookkeeping" },
+                { label: "Payroll", href: "/services/payroll" },
+                { label: "VAT Returns", href: "/services/vat-returns" },
+                { label: "Self Assessment", href: "/services/self-assessment" },
+                { label: "Company Accounts", href: "/services/company-accounts" },
+                { label: "Corporation Tax", href: "/services/corporation-tax" },
               ].map((link) => (
                 <li key={link.label}>
-                  <button
-                    onClick={() => scrollToSection(link.id)}
-                    className="text-[14px] font-light text-slate-500 hover:text-white transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07111F] rounded-sm py-1"
+                  <a
+                    href={link.href}
+                    className="text-[14px] font-light text-slate-500 hover:text-white transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07111F] rounded-sm py-1 inline-block"
                   >
                     {link.label}
-                  </button>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -142,7 +146,7 @@ tracking-[0.01em] font-medium text-[#F8FAFC] mb-6">
                 { label: "Autumn Budget 2026 Briefing", path: "/insights/budget" },
                 { label: "UK GDPR Regulatory Updates", path: "/insights/gdpr" },
                 { label: "HMRC Compliance Guidelines", path: "/insights/hmrc" },
-                { label: "Economic & Market Analysis", path: "/insights/analysis" }
+                { label: "Economic & Market Analysis", path: "/insights/analysis" },
               ].map((link) => (
                 <li key={link.label}>
                   <a
@@ -166,7 +170,7 @@ tracking-[0.01em] font-medium text-[#F8FAFC] mb-6">
               className="inline-flex items-center justify-between gap-3 px-5 py-2.5 border border-white/10 bg-transparent hover:bg-white/[0.03] hover:border-white/30 text-[13px] font-medium text-[#F8FAFC] transition-all duration-300 group focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07111F] rounded-md min-h-[44px]"
             >
               Secure Login
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-slate-500 group-hover:text-white transition-colors"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-slate-500 group-hover:text-white transition-colors" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
             </a>
 
             <div className="mt-10">
@@ -179,7 +183,7 @@ tracking-[0.01em] font-medium text-[#F8FAFC] mb-6">
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-[14px] font-light text-slate-500 hover:text-white transition-colors duration-300 w-fit focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07111F] rounded-sm py-1"
               >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                 LinkedIn
               </a>
             </div>
@@ -194,7 +198,7 @@ tracking-[0.01em] font-medium text-[#F8FAFC] mb-6">
             <p className="text-[12px] text-slate-500 font-light leading-[1.7]">
               ScaleUp Accounting Ltd is a limited company registered in England and Wales.
               Registered office: 120 Moorgate, London, EC2M 6UR. Company No. 17121237. <br className="hidden md:block" />
-              Licensed and regulated by the Association of Accounting Technicians (AAT) under licence number 98765. Details of our professional registration can be viewed at <a href="https://www.aat.org.uk/" target="_blank" rel="noopener noreferrer" className="underline decoration-slate-600 hover:text-slate-200 transition-colors">aat.org.uk</a>.
+              Licensed and regulated by the Association of Accounting Technicians (AAT). Details of our professional registration can be viewed at{" "}<a href="https://www.aat.org.uk/" target="_blank" rel="noopener noreferrer" className="underline decoration-slate-600 hover:text-slate-200 transition-colors">aat.org.uk</a>.
             </p>
 
             <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-[12px] font-light text-slate-500">
@@ -213,7 +217,7 @@ tracking-[0.01em] font-medium text-[#F8FAFC] mb-6">
             aria-label="Back to top"
           >
             Back to Top
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transform transition-transform duration-300 group-hover:-translate-y-1"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transform transition-transform duration-300 group-hover:-translate-y-1" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
           </button>
 
         </div>

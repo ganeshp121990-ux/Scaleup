@@ -73,7 +73,7 @@ export default function Navbar() {
           >
             <Image
               src="/Logo.svg"
-              alt="ScaleUp Logo"
+              alt="ScaleUp Accounting Ltd – home"
               width={180}
               height={48}
               priority

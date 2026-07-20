@@ -4,7 +4,25 @@ import Footer from "@/components/layout/Footer";
 
 export const metadata = {
   title: "Compliance & Regulatory Framework | ScaleUp Accounting Ltd",
-  description: "Our commitment to Anti-Money Laundering, UK GDPR 2026, and Professional Indemnity.",
+  description:
+    "ScaleUp Accounting Ltd is supervised by the AAT for Anti-Money Laundering. We implement UK GDPR 2026 Privacy by Design and carry comprehensive Professional Indemnity Insurance.",
+  alternates: {
+    canonical: "https://www.scaleupaccounting.uk/compliance",
+  },
+  openGraph: {
+    title: "Compliance & Regulatory Framework | ScaleUp Accounting Ltd",
+    description:
+      "Our commitment to AML supervision, UK GDPR 2026, and Professional Indemnity Insurance — ScaleUp Accounting Ltd.",
+    url: "https://www.scaleupaccounting.uk/compliance",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ScaleUp Accounting Ltd – Compliance & Regulatory Framework",
+      },
+    ],
+  },
 };
 
 export default function CompliancePage() {

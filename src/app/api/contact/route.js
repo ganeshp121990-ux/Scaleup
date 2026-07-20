@@ -16,6 +16,13 @@ export async function POST(req) {
       notes,
     } = body;
 
+    if (!service || !date || !time || !name || !email || !phone) {
+      return Response.json(
+        { success: false, error: "Missing required fields" },
+        { status: 400 }
+      );
+    }
+
     const data = await resend.emails.send({
       from: "Scaleup Accounting <info@scaleupaccounting.uk>",
       to: ["info@scaleupaccounting.uk"],

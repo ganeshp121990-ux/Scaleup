@@ -2,6 +2,7 @@ import { Inter, Poppins } from "next/font/google";
 import "@/app/globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import Cursor from "@/components/Cursor";
+import { JSONLD_ORGANIZATION } from "@/lib/siteConfig";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,21 +20,22 @@ export const metadata = {
 
   title: {
     default:
-      "ScaleUp Accounting Limited | Strategic Accounting & UK Business Advisory",
+      "ScaleUp Accounting Limited | AAT Licensed Accountants London",
     template: "%s | ScaleUp Accounting",
   },
 
   description:
-    "Professional bookkeeping, tax compliance, payroll, VAT, and Recruitment Process Outsourcing (RPO) services for UK businesses.",
+    "London-based AAT Licensed Accounting Practice. Professional bookkeeping, payroll, VAT returns, self assessment, company accounts, and corporation tax services for UK businesses.",
 
   keywords: [
-    "accounting firm UK",
-    "bookkeeping services UK",
-    "tax services UK",
-    "VAT returns UK",
+    "AAT licensed accountants London",
+    "bookkeeping services London",
     "payroll services UK",
-    "RPO accounting",
-    "AAT licensed accountants",
+    "VAT returns London",
+    "self assessment tax return",
+    "company accounts preparation",
+    "corporation tax UK",
+    "accountants for small business London",
     "scaleup accounting",
   ],
 
@@ -47,6 +49,10 @@ export const metadata = {
 
   category: "Accounting Services",
 
+  alternates: {
+    canonical: "https://www.scaleupaccounting.uk",
+  },
+
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
@@ -54,10 +60,10 @@ export const metadata = {
 
   openGraph: {
     title:
-      "ScaleUp Accounting Limited | Strategic Accounting & UK Business Advisory",
+      "ScaleUp Accounting Limited | AAT Licensed Accountants London",
 
     description:
-      "Professional bookkeeping, tax compliance, payroll, VAT, and Recruitment Process Outsourcing (RPO) services for UK businesses.",
+      "London-based AAT Licensed Accounting Practice. Professional bookkeeping, payroll, VAT returns, self assessment, company accounts, and corporation tax services for UK businesses.",
 
     url: "https://www.scaleupaccounting.uk",
 
@@ -66,16 +72,27 @@ export const metadata = {
     locale: "en_GB",
 
     type: "website",
+
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ScaleUp Accounting Ltd – London-based AAT Licensed Accounting Practice",
+      },
+    ],
   },
 
   twitter: {
     card: "summary_large_image",
 
     title:
-      "ScaleUp Accounting Limited | Strategic Accounting & UK Business Advisory",
+      "ScaleUp Accounting Limited | AAT Licensed Accountants London",
 
     description:
-      "Professional bookkeeping, tax compliance, payroll, VAT, and RPO services for UK businesses.",
+      "London-based AAT Licensed Accounting Practice. Professional bookkeeping, payroll, VAT, self assessment, and corporation tax for UK businesses.",
+
+    images: ["/og-image.jpg"],
   },
 
   robots: {
@@ -102,6 +119,10 @@ export default function RootLayout({ children }) {
       <body className="bg-[#FDFCFB] text-[#0A1A2F] font-body overflow-x-hidden antialiased selection:bg-[#C8A96A]/30 selection:text-[#0A1A2F]">
         <SmoothScroll>{children}</SmoothScroll>
         <Cursor />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(JSONLD_ORGANIZATION) }}
+        />
       </body>
     </html>
   );

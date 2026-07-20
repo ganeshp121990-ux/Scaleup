@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function ContactSection() {
@@ -17,6 +17,34 @@ export default function ContactSection() {
   });
 
   const [loading, setLoading] = useState(false);
+  const [availableSlots, setAvailableSlots] = useState([]);
+  const [slotsLoading, setSlotsLoading] = useState(false);
+  const [bookedDates, setBookedDates] = useState({});
+  const [bookingRef, setBookingRef] = useState("");
+
+  const toISODate = (dateObj) => {
+    if (!dateObj) return null;
+    const yyyy = dateObj.getUTCFullYear();
+    const mm = String(dateObj.getUTCMonth() + 1).padStart(2, '0');
+    const dd = String(dateObj.getUTCDate()).padStart(2, '0');
+    return `${yyyy}-${mm}-${dd}`;
+  };
+
+  useEffect(() => {
+    if (!booking.date) return;
+    const dateStr = toISODate(booking.date);
+    setSlotsLoading(true);
+    fetch(`/api/availability?date=${dateStr}`)
+      .then(res => res.json())
+      .then(data => {
+        setAvailableSlots(data.available || []);
+        if (data.fullyBooked) {
+          setBookedDates(prev => ({ ...prev, [dateStr]: true }));
+        }
+      })
+      .catch(() => setAvailableSlots([]))
+      .finally(() => setSlotsLoading(false));
+  }, [booking.date]);
 
   const services = [
     "Bookkeeping & VAT",
@@ -29,17 +57,24 @@ export default function ContactSection() {
     "RPO & Recruitment",
     "Other"
   ];
-  const timings = ["09:00 AM", "10:30 AM", "01:00 PM", "02:30 PM", "04:00 PM", "05:30 PM", "07:00 PM", "08:30 PM"];
 
   const availableDays = useMemo(() => {
     let days = [];
-    let d = new Date();
+    
+    const formatter = new Intl.DateTimeFormat('en-CA', { 
+      timeZone: 'Europe/London', 
+      year: 'numeric', month: '2-digit', day: '2-digit' 
+    });
+    const londonTodayStr = formatter.format(new Date()); 
+    
+    let d = new Date(`${londonTodayStr}T00:00:00Z`);
+    
     const limit = showExtendedDates ? 21 : 7;
     while (days.length < limit) {
-      if (d.getDay() !== 0 && d.getDay() !== 6) {
+      if (d.getUTCDay() !== 0 && d.getUTCDay() !== 6) {
         days.push(new Date(d));
       }
-      d.setDate(d.getDate() + 1);
+      d.setUTCDate(d.getUTCDate() + 1);
     }
     return days;
   }, [showExtendedDates]);
@@ -53,6 +88,26 @@ export default function ContactSection() {
     setLoading(true);
 
     try {
+      const dateStr = toISODate(booking.date);
+      const bookingRes = await fetch("/api/booking", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...booking, date: dateStr }),
+      });
+      
+      const bookingData = await bookingRes.json();
+
+      if (bookingRes.status === 409) {
+        alert("This slot was just taken. Please choose another time.");
+        setAvailableSlots([]);
+        setStep(2);
+        setLoading(false);
+        return;
+      }
+      if (!bookingData.success) throw new Error(bookingData.message || 'Failed to book slot');
+
+      setBookingRef(bookingData.bookingRef);
+
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -68,7 +123,7 @@ export default function ContactSection() {
       setStep(4);
 
     } catch (err) {
-      alert("Failed to send message");
+      alert("Failed to confirm booking");
       console.error(err);
     }
 
@@ -279,16 +334,16 @@ export default function ContactSection() {
                               className={`p-3 rounded-md border text-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-[#0A1A2F] ${isSelected
                                 ? 'border-[#0A1A2F] bg-[#0A1A2F] text-white shadow-md'
                                 : 'border-slate-200 bg-white hover:border-slate-300 text-[#0A1A2F]'
-                                }`}
+                                } ${bookedDates[toISODate(d)] ? 'opacity-40 pointer-events-none' : ''}`}
                             >
                               <div className={`text-[10px] font-semibold uppercase tracking-wider mb-1 ${isSelected ? 'text-white/80' : 'text-slate-500'}`}>
-                                {d.toLocaleDateString('en-US', { weekday: 'short' })}
+                                {d.toLocaleDateString('en-US', { weekday: 'short', timeZone: 'UTC' })}
                               </div>
                               <div className="text-2xl leading-none mb-1 font-semibold">
-                                {d.getDate()}
+                                {d.getUTCDate()}
                               </div>
                               <div className={`text-[11px] font-medium ${isSelected ? 'text-white/80' : 'text-slate-500'}`}>
-                                {d.toLocaleDateString('en-US', { month: 'short' })}
+                                {d.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' })}
                               </div>
                             </button>
                           );
@@ -314,16 +369,22 @@ export default function ContactSection() {
                           >
                             <p className="text-xs font-semibold text-slate-500 mb-4">Available Times</p>
                             <div className="grid grid-cols-2 gap-3">
-                              {timings.map(t => (
-                                <button
-                                  key={t}
-                                  onClick={() => { setBooking({ ...booking, time: t }); setStep(3); }}
-                                  className="py-3 px-4 text-sm rounded-md border border-slate-200 hover:border-[#0A1A2F] hover:bg-slate-50 transition-colors text-[#0A1A2F] font-medium flex justify-between items-center group bg-white focus:outline-none focus:ring-1 focus:ring-[#0A1A2F]"
-                                >
-                                  {t}
-                                  <span className="opacity-0 group-hover:opacity-100 transition-opacity text-[#0A1A2F]">→</span>
-                                </button>
-                              ))}
+                              {slotsLoading ? (
+                                <p className="text-sm text-slate-400 col-span-2">Loading available times…</p>
+                              ) : availableSlots.length === 0 ? (
+                                <p className="text-sm text-slate-400 col-span-2">No times available for this date.</p>
+                              ) : (
+                                availableSlots.map(t => (
+                                  <button
+                                    key={t}
+                                    onClick={() => { setBooking({ ...booking, time: t }); setStep(3); }}
+                                    className="py-3 px-4 text-sm rounded-md border border-slate-200 hover:border-[#0A1A2F] hover:bg-slate-50 transition-colors text-[#0A1A2F] font-medium flex justify-between items-center group bg-white focus:outline-none focus:ring-1 focus:ring-[#0A1A2F]"
+                                  >
+                                    {t}
+                                    <span className="opacity-0 group-hover:opacity-100 transition-opacity text-[#0A1A2F]">→</span>
+                                  </button>
+                                ))
+                              )}
                             </div>
                           </motion.div>
                         )}
@@ -347,7 +408,7 @@ export default function ContactSection() {
                         <div className="flex items-center gap-4 text-sm text-slate-600">
                           <span className="flex items-center gap-1.5">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
-                            {booking.date?.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}
+                            {booking.date?.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'UTC' })}
                           </span>
                           <span className="flex items-center gap-1.5">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
@@ -423,9 +484,12 @@ export default function ContactSection() {
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                       </div>
                       <h4 className="text-2xl font-semibold text-[#0A1A2F] mb-3">Request Received</h4>
-                      <p className="text-slate-600 text-sm max-w-[320px] leading-relaxed mb-8">
+                      <p className="text-slate-600 text-sm max-w-[320px] leading-relaxed mb-4">
                         Your enquiry has been received successfully. A member of our team will contact you shortly regarding your request and next steps.
                       </p>
+                      {bookingRef && (
+                        <p className="text-xs font-mono text-slate-500 mb-8">Ref: {bookingRef}</p>
+                      )}
                       <button
                         onClick={() => {
                           setStep(1);
