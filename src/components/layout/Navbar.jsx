@@ -2,6 +2,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
 
 const EASE = [0.2, 1, 0.2, 1];
 
@@ -19,6 +20,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+const pathname = usePathname();
+const router = useRouter();
 
   useEffect(() => {
     const t = setTimeout(() => setVisible(true), 1800);
@@ -48,10 +51,23 @@ export default function Navbar() {
     return () => { document.body.style.overflow = ""; };
   }, [mobileOpen]);
 
-  const scrollTo = useCallback((id) => {
+  const scrollTo = useCallback(
+  (id) => {
+    if (pathname !== "/") {
+      router.push(`/#${id}`);
+      return;
+    }
+
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  }, []);
+
+    if (el) {
+      el.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  },
+  [pathname, router]
+);
 
   return (
     <>
