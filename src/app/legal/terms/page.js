@@ -18,64 +18,88 @@ export const metadata = {
 
 const sections = [
   {
-    title: "1. Our Services",
+    title: "1. Scope of Services & Professional Standards",
     content: [
-      "ScaleUp Accounting Ltd (\"we\", \"us\", \"our\") agrees to provide accounting, bookkeeping, payroll, VAT, tax, and related services as set out in a separate letter of engagement or service agreement issued to you (\"the Client\") prior to the commencement of work. The specific scope of services, fees, and timing will be confirmed in that document.",
-      "We are an AAT Licensed Accounting Practice regulated by the Association of Accounting Technicians (AAT) and carry out our work in accordance with AAT professional standards.",
+      "We will provide professional accounting services as agreed in writing within a formal Letter of Engagement.",
+      "As an AAT (Association of Accounting Technicians) registered practice, we are bound by the ethical guidelines and professional standards set by the AAT.",
+      "We will exercise reasonable skill and care in providing our services, ensuring compliance with applicable professional standards and UK law.",
     ],
   },
   {
     title: "2. Client Responsibilities",
     content: [
-      "The Client is responsible for: providing us with complete, accurate, and timely information required to perform our services; notifying us promptly of any changes in circumstances that may affect the work; approving or raising queries regarding draft documents within agreed timescales; maintaining adequate accounting records; and complying with all applicable laws and regulations, including those imposed by HMRC and Companies House.",
-      "We rely on the information provided by the Client. We cannot accept responsibility for errors or omissions arising from inaccurate or incomplete information supplied by the Client.",
+      "To enable us to provide effective services, you agree to:",
+      "• Provide complete, accurate, and timely information and documentation required for our services.",
+      "• Respond promptly to requests for clarification or further information.",
+      "• Ensure your internal records and accounts are properly maintained between formal reviews where applicable.",
+      "• Notify us immediately of any material changes to your business operations, financial position, or corporate structure.",
+      "We are not responsible for delays, penalties, or errors resulting from your failure to provide necessary information on time.",
     ],
   },
   {
-    title: "3. Fees and Payment",
+    title: "3. Fees and Payment Terms",
     content: [
-      "Our fees are agreed with each client individually and set out in the applicable letter of engagement. Unless otherwise agreed, fees are based on time spent at our standard hourly rates, with estimates provided before work commences.",
-      "Invoices are payable within 14 days of the invoice date. We reserve the right to charge interest on overdue amounts at 8% per annum above the Bank of England base rate, pursuant to the Late Payment of Commercial Debts (Interest) Act 1998. We also reserve the right to suspend or terminate services where invoices remain materially overdue.",
+      "Our fees are based on the degree of responsibility, skill involved, and time required to complete the work, unless a fixed fee has been agreed in writing.",
+      "Fees will be billed at regular intervals as outlined in the Letter of Engagement.",
+      "Invoices are payable within a maximum of 7 days from the invoice date, unless otherwise stated in your Letter of Engagement.",
+      "We reserve the right to charge statutory interest on late payments in accordance with the Late Payment of Commercial Debts (Interest) Act 1998.",
+      "If payments are delayed, we may suspend services until outstanding balances are cleared.",
     ],
   },
   {
     title: "4. Confidentiality",
     content: [
-      "We will keep all Client information strictly confidential and will not disclose it to any third party without the Client's consent, except where: required by law or regulation (including disclosure to HMRC, Companies House, or law enforcement); required by our regulatory body (AAT) in the conduct of a quality review; or where disclosure is necessary to provide the agreed services (for example, to software providers acting as data processors).",
-      "Our confidentiality obligations continue after the termination of our engagement.",
+      "We are committed to maintaining the highest level of confidentiality.",
+      "We will not disclose confidential information relating to your business, financial affairs, or personal data to any third party without your consent, except where required by law, court order, or professional regulatory bodies such as the AAT.",
     ],
   },
   {
-    title: "5. Professional Indemnity",
+    title: "5. Complaints Procedure",
     content: [
-      "ScaleUp Accounting Ltd holds Professional Indemnity Insurance as required by the AAT. Details of our policy are available on request. Our liability to the Client is limited to the extent permitted by applicable law, and in any case does not exceed the level of cover provided by our Professional Indemnity Insurance.",
+      "We are committed to providing a high standard of service. If you are dissatisfied with any aspect of our service, please raise the matter with us immediately so we can attempt to resolve it.",
+      "If we are unable to resolve your complaint internally, as an AAT member, you may have the right to refer the matter to the Association of Accounting Technicians (AAT) for further investigation.",
     ],
   },
   {
     title: "6. Limitation of Liability",
     content: [
-      "We accept liability only for direct loss caused by our own negligence or wilful default. We do not accept liability for: loss of profit, consequential loss, or indirect loss; any loss arising from the Client's failure to act on our advice or provide accurate information; penalties, interest, or surcharges imposed by HMRC or other authorities where these result from the Client's failure to meet deadlines or provide information in time.",
-      "Nothing in these terms limits our liability for death or personal injury caused by negligence, or for fraud or fraudulent misrepresentation.",
+      "Our liability for any loss or damage arising from our services, whether in contract, tort (including negligence), or otherwise, is limited to the amount of fees paid by you for the specific service giving rise to the claim, or as otherwise stated in our Letter of Engagement.",
+      "We hold Professional Indemnity Insurance in accordance with AAT requirements.",
     ],
   },
   {
-    title: "7. Anti-Money Laundering",
+    title: "7. Data Protection & Anti-Money Laundering (AML)",
     content: [
-      "As an AAT-licensed firm, we are subject to the Money Laundering, Terrorist Financing and Transfer of Funds (Information on the Payer) Regulations 2017. We are required to apply customer due diligence measures before establishing a business relationship and to maintain records of identity verification. We may be required by law to report any suspicion of money laundering or terrorist financing to the relevant authorities, and we may not be able to inform the Client if such a report is made.",
+      "Data Protection: We comply with applicable UK data protection legislation, including UK GDPR. Details of how we process your personal data are provided in our Privacy Policy available at https://scaleupaccounting.uk.",
+      "AML Compliance: Under the Money Laundering, Terrorist Financing and Transfer of Funds Regulations 2017 and AAT supervisory guidelines, we are required to verify client identities.",
+      "We are also legally required to report suspicious transactions to the National Crime Agency (NCA) without informing you.",
     ],
   },
   {
     title: "8. Termination",
     content: [
-      "Either party may terminate the engagement by giving not less than 30 days' written notice. Upon termination, the Client remains liable for all fees and disbursements incurred up to the termination date. We will provide reasonable assistance to ensure a smooth handover to a successor adviser.",
-      "We reserve the right to terminate the engagement immediately if the Client fails to pay outstanding invoices, provides fraudulent or misleading information, or if continuation would require us to breach our professional obligations.",
+      "Either party may terminate the engagement by providing 30 days' written notice.",
+      "Following termination, you remain responsible for payment of all work completed up to the termination date.",
+      "We reserve the right to withhold files or documents until all outstanding fees have been settled in full.",
     ],
   },
   {
-    title: "9. Governing Law",
+    title: "9. Governing Law and Jurisdiction",
     content: [
-      "These Terms of Business are governed by and construed in accordance with the laws of England and Wales. Any disputes arising from or in connection with these terms shall be subject to the exclusive jurisdiction of the courts of England and Wales.",
-      "These Terms of Business were last reviewed: July 2026.",
+      "These Terms and Conditions are governed by and interpreted according to the laws of England and Wales.",
+      "Any disputes arising from these terms shall be subject to the exclusive jurisdiction of the English courts.",
+    ],
+  },
+  {
+    title: "10. Contact Us",
+    content: [
+      "If you have any questions or require clarification regarding these Terms and Conditions, please contact us:",
+      "Scaleup Accounting Limited",
+      "Director: Sumit Monani",
+      "Floor 37, Regus, 1 Canada Square, Canary Wharf",
+      "London E14 5AA, United Kingdom",
+      "Email: info@scaleupaccounting.uk",
+      "Phone: +44 75187 55555",
     ],
   },
 ];
@@ -117,8 +141,14 @@ export default function TermsPage() {
           </h1>
 
           <p className="text-[#0A1A2F]/60 text-lg md:text-xl font-light tracking-wide leading-[1.8]">
-            These standard terms govern the professional relationship between ScaleUp Accounting Ltd and our clients. They are to be read together with your individual letter of engagement, which sets out the specific services, fees, and timescales agreed with you.
-          </p>
+  Effective Date: July 2026
+  <br />
+  <br />
+  These Terms and Conditions set out the basis on which Scaleup Accounting
+  Limited ("we", "us", or "our") will provide accounting, tax, and bookkeeping
+  services to you ("the Client", "you"). By engaging our services, you agree
+  to be bound by these terms.
+</p>
         </div>
 
         <div className="space-y-8 max-w-4xl">

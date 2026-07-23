@@ -200,18 +200,20 @@ export default function ContactSection() {
             <div className="flex flex-col gap-1.5">
               <span className="text-xs tracking-wider font-semibold uppercase text-slate-500">Registered Office</span>
               <p className="text-sm font-medium text-[#0A1A2F] leading-relaxed">
-                Registered Office Address<br />
-                London, United Kingdom
+                
+                Floor 37, Regus, 1 Canada Square, Canary Wharf<br />
+                London E14 5AA, United Kingdom
               </p>
             </div>
             <div className="flex flex-col gap-1.5">
               <span className="text-xs tracking-wider font-semibold uppercase text-slate-500">Direct Contact</span>
-              <p className="text-sm font-medium text-[#0A1A2F]">
-                074449 55555
-              </p>
-              <p className="text-sm font-medium text-[#0A1A2F]">
-                info@scaleupaccounting.uk
-              </p>
+              <a href="tel:+4475187 55555" className="text-sm font-medium text-[#0A1A2F] hover:text-[#C8A96A] transition-colors">
++4475187 55555
+</a>
+              <a href="mailto:info@scaleupaccounting.uk" className="text-sm font-medium text-[#0A1A2F] hover:text-[#C8A96A] transition-colors">
+info@scaleupaccounting.uk
+</a>
+              
             </div>
           </motion.div>
 

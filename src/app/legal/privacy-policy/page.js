@@ -18,58 +18,75 @@ export const metadata = {
 
 const sections = [
   {
-    title: "1. Who We Are",
+    title: "1. Important Information & Who We Are",
     content: [
-      "ScaleUp Accounting Ltd is the data controller for any personal data we collect about you. We are a limited company registered in England and Wales (Company No. 17121237), with our registered office at 120 Moorgate, London, EC2M 6UR.",
-      "We are licensed and regulated by the Association of Accounting Technicians (AAT) and are registered with the Information Commissioner's Office (ICO). You can contact us about data protection matters at advisory@scaleupaccounting.co.uk.",
+      'Scaleup Accounting Limited is the data controller responsible for your personal data (referred to as "we", "us", or "our" in this Privacy Policy).',
+      "Legal Entity: Scaleup Accounting Limited",
+      "Director: Sumit Monani",
+      "Email: info@scaleupaccounting.uk",
+      "Phone: +44 75187 55555",
+      "Website: https://scaleupaccounting.uk",
+      "Postal Address: Floor 37, Regus, 1 Canada Square, Canary Wharf, London E14 5AA, United Kingdom",
+      "You have the right to make a complaint at any time to the Information Commissioner's Office (ICO), the UK regulator for data protection issues (www.ico.org.uk). We would, however, appreciate the opportunity to address your concerns before you contact the ICO, so please contact us first.",
     ],
   },
   {
-    title: "2. What Personal Data We Collect",
+    title: "2. The Data We Collect About You",
     content: [
-      "We collect personal data that you provide directly to us when you engage our services, make an enquiry, or communicate with us. This may include: full name, address, date of birth, National Insurance number, Unique Taxpayer Reference (UTR), contact details (email address and telephone number), financial information (income, expenditure, bank account details) necessary to provide our services, identity verification documents (passport, driving licence) required under Anti-Money Laundering regulations, and employment or business information relevant to the services requested.",
-      "We may also collect limited technical data from your use of our website, such as your IP address, browser type, and pages visited, for security and analytics purposes.",
+      "We may collect, use, store, and transfer different kinds of personal data about you, including:",
+      "• Identity Data – first name, last name, username or similar identifier, marital status, title, date of birth, and gender.",
+      "• Contact Data – billing address, residential address, email address, and telephone numbers.",
+      "• Financial Data – bank account details, payment card details, tax reference numbers (e.g. UTR and National Insurance number), payroll records, financial statements, and transaction histories.",
+      "• Transaction Data – details about payments to and from you and services you have purchased from us.",
+      "• Technical Data – IP address, login data, browser type and version, operating system, and platform.",
+      "• Profile & Usage Data – information about how you use our website, products, and services.",
+      "• Marketing & Communications Data – your marketing preferences and communication preferences.",
     ],
   },
   {
     title: "3. How We Use Your Personal Data",
     content: [
-      "We use your personal data to provide the accounting, bookkeeping, payroll, VAT, and tax services you have engaged us for; to comply with our legal obligations, including those imposed by HMRC, Companies House, and the Money Laundering Regulations 2017; to communicate with you about your affairs and our services; to maintain our professional records; and to send you relevant regulatory updates or service-related information.",
-      "The legal basis for processing is primarily the performance of a contract (Article 6(1)(b) UK GDPR), compliance with a legal obligation (Article 6(1)(c) UK GDPR), and where applicable, our legitimate interests (Article 6(1)(f) UK GDPR) in operating our practice effectively.",
+      "We will only use your personal data where the law allows us to.",
+      "Your personal data may be used to:",
+      "• Register you as a new client.",
+      "• Provide accounting, bookkeeping, tax, and related professional services.",
+      "• Verify your identity under Anti-Money Laundering (AML) regulations.",
+      "• Manage payments, fees, and amounts owed.",
+      "• Manage our ongoing relationship with you.",
+      "• Administer, maintain, and protect our business and website.",
+      "The legal bases for processing include the performance of a contract, compliance with legal obligations, and our legitimate business interests where applicable.",
     ],
   },
   {
-    title: "4. How Long We Keep Your Data",
+    title: "4. Disclosures of Your Personal Data",
     content: [
-      "We retain client records for a minimum of six years following the end of the tax year to which they relate, in accordance with HMRC requirements and our professional obligations. Identity verification documents collected for Anti-Money Laundering purposes are retained for a minimum of five years from the end of our business relationship with you.",
-      "Where data is no longer required, we securely delete or anonymise it. You may request early deletion where no legal or regulatory obligation requires us to retain your data.",
+      "We may share your personal data with:",
+      "• Government authorities including HM Revenue & Customs (HMRC), Companies House, and other UK regulators.",
+      "• Professional regulatory bodies where required.",
+      "• Third-party service providers, including secure cloud accounting and IT service providers.",
+      "• Professional advisers such as lawyers, bankers, auditors, insurers, and accountants.",
+      "All third parties are required to protect your personal data and process it in accordance with applicable data protection laws.",
     ],
   },
   {
-    title: "5. Who We Share Your Data With",
+    title: "5. Data Security and Retention",
     content: [
-      "We do not sell or rent your personal data to third parties. We may share your data with HMRC and Companies House as required in the course of providing our services; our cloud accounting software providers (such as Xero, QuickBooks, or FreeAgent) under data processing agreements; and our professional indemnity insurers where a claim arises.",
-      "All third-party processors we engage are bound by contractual obligations to process your data only on our instructions and in compliance with applicable data protection law.",
+      "Data Security: We have implemented appropriate technical and organisational security measures to protect your personal data against accidental loss, unauthorised access, alteration, or disclosure. Access is restricted to employees, contractors, and trusted third parties who require it for legitimate business purposes.",
+      "Data Retention: We retain personal data only for as long as necessary to fulfil the purposes for which it was collected. To comply with HMRC requirements and professional obligations, we retain basic client information for at least six years after the client relationship ends, plus the current tax year.",
     ],
   },
   {
-    title: "6. Your Rights Under UK GDPR",
+    title: "6. Your Legal Rights",
     content: [
-      "You have the right to: access the personal data we hold about you; request correction of any inaccurate or incomplete data; request erasure of your data where there is no legitimate reason for us to continue processing it; object to processing based on our legitimate interests; request restriction of processing in certain circumstances; and receive your data in a portable format.",
-      "To exercise any of these rights, please contact us in writing at advisory@scaleupaccounting.co.uk. We will respond within one calendar month. If you are not satisfied with our response, you have the right to lodge a complaint with the Information Commissioner's Office at ico.org.uk.",
-    ],
-  },
-  {
-    title: "7. Data Security",
-    content: [
-      "We implement appropriate technical and organisational measures to protect your personal data against unauthorised access, loss, or disclosure. These include encrypted transmission of data, secure cloud-based document management, access controls limiting data access to authorised personnel only, and regular security reviews.",
-    ],
-  },
-  {
-    title: "8. Changes to This Policy",
-    content: [
-      "We may update this Privacy Policy from time to time to reflect changes in law or our practices. The current version will always be available on our website. Material changes will be communicated to active clients directly.",
-      "This policy was last reviewed: July 2026.",
+      "Under UK data protection law, you have the right to:",
+      "• Request access to your personal data.",
+      "• Request correction of inaccurate or incomplete personal data.",
+      "• Request erasure of your personal data.",
+      "• Object to the processing of your personal data.",
+      "• Request restriction of processing.",
+      "• Request the transfer of your personal data.",
+      "• Withdraw consent at any time where processing is based on your consent.",
+      "To exercise any of these rights, please contact us at info@scaleupaccounting.uk. We aim to respond to all legitimate requests within one month, and no fee is normally payable.",
     ],
   },
 ];
@@ -111,8 +128,15 @@ export default function PrivacyPolicyPage() {
           </h1>
 
           <p className="text-[#0A1A2F]/60 text-lg md:text-xl font-light tracking-wide leading-[1.8]">
-            We are committed to protecting and respecting your privacy. This policy explains how ScaleUp Accounting Ltd collects, uses, and safeguards your personal data in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.
-          </p>
+  Last updated: July 2026
+  <br />
+  <br />
+  Scaleup Accounting Limited respects your privacy and is committed to
+  protecting your personal data. This Privacy Policy explains how we collect,
+  use, store, and protect your personal data when you visit our website, use
+  our professional services, or otherwise interact with us. It also explains
+  your privacy rights and how the law protects you.
+</p>
         </div>
 
         <div className="space-y-8 max-w-4xl">

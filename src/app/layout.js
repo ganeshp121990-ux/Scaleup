@@ -1,4 +1,5 @@
 import { Inter, Poppins } from "next/font/google";
+import Script from "next/script";
 import "@/app/globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import Cursor from "@/components/Cursor";
@@ -119,10 +120,27 @@ export default function RootLayout({ children }) {
       <body className="bg-[#FDFCFB] text-[#0A1A2F] font-body overflow-x-hidden antialiased selection:bg-[#C8A96A]/30 selection:text-[#0A1A2F]">
         <SmoothScroll>{children}</SmoothScroll>
         <Cursor />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(JSONLD_ORGANIZATION) }}
-        />
+        <Script
+  id="organization-schema"
+  type="application/ld+json"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(JSONLD_ORGANIZATION),
+  }}
+/>
+        <Script
+  src="https://www.googletagmanager.com/gtag/js?id=G-NJCD6029BE"
+  strategy="afterInteractive"
+/>
+
+<Script id="google-analytics" strategy="afterInteractive">
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NJCD6029BE');
+  `}
+</Script>
       </body>
     </html>
   );

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaLinkedinIn, FaFacebookF, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   const [copied, setCopied] = useState(false);
@@ -53,15 +54,21 @@ export default function Footer() {
               London-based AAT Licensed Accounting Practice providing bookkeeping, tax, payroll, and VAT services for UK businesses.
             </p>
 
+             <p className="text-[14px] text-slate-500 font-light leading-[1.8] mb-10 max-w-sm">
+  AAT Licensed Bookkeeper (AATQB) <br />
+  Membership Number: 20526012 <br />
+  Regulated by the Association of Accounting Technicians
+</p>
+
+
             <div className="flex flex-col gap-8">
               <div className="flex flex-col gap-2">
                 <span className="text-[11px] uppercase tracking-[0.1em] font-medium text-slate-500">
-                  London Office
+                  London Office-
+                  Floor 37, Regus, 1 Canada Square, Canary Wharf,
+London E14 5AA, United Kingdom
                 </span>
-                <span className="text-[14px] text-slate-300 font-light leading-relaxed">
-                  <br />
-                  London
-                </span>
+                
               </div>
 
               <div className="flex flex-col gap-2">
@@ -178,14 +185,34 @@ tracking-[0.01em] font-medium text-[#F8FAFC] mb-6">
                 Connect
               </h3>
               <a
-                href="https://LinkedIn.com/company/scaleupaccountingltd/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-[14px] font-light text-slate-500 hover:text-white transition-colors duration-300 w-fit focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07111F] rounded-sm py-1"
-              >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                LinkedIn
-              </a>
+  href="https://LinkedIn.com/company/scaleupaccountingltd/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 text-[14px] font-light text-slate-500 hover:text-white transition-colors duration-300"
+>
+  <FaLinkedinIn size={15} />
+  LinkedIn
+</a>
+
+<a
+  href="https://www.facebook.com/share/1JTS72qouV/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 text-[14px] font-light text-slate-500 hover:text-white transition-colors duration-300"
+>
+  <FaFacebookF size={15} />
+  Facebook
+</a>
+
+<a
+  href="https://www.instagram.com/scaleup_accounting?utm_source=qr&igsh=MTJjYzdzcm03cWg3Zg=="
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 text-[14px] font-light text-slate-500 hover:text-white transition-colors duration-300"
+>
+  <FaInstagram size={15} />
+  Instagram
+</a>
             </div>
           </div>
 
@@ -197,7 +224,7 @@ tracking-[0.01em] font-medium text-[#F8FAFC] mb-6">
           <div className="flex flex-col gap-6 max-w-3xl">
             <p className="text-[12px] text-slate-500 font-light leading-[1.7]">
               ScaleUp Accounting Ltd is a limited company registered in England and Wales.
-              Registered office: 120 Moorgate, London, EC2M 6UR. Company No. 17121237. <br className="hidden md:block" />
+              Registered office: Floor 37, Regus, 1 Canada Square, Canary Wharf,London E14 5AA, United Kingdom. <br className="hidden md:block" />
               Licensed and regulated by the Association of Accounting Technicians (AAT). Details of our professional registration can be viewed at{" "}<a href="https://www.aat.org.uk/" target="_blank" rel="noopener noreferrer" className="underline decoration-slate-600 hover:text-slate-200 transition-colors">aat.org.uk</a>.
             </p>
 

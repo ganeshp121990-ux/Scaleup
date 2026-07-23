@@ -18,54 +18,74 @@ export const metadata = {
 
 const sections = [
   {
-    title: "1. Introduction",
+    title: "1. Policy Statement & Commitment",
     content: [
-      "ScaleUp Accounting Ltd (\"we\", \"our\", the \"Company\") is committed to acting ethically and with integrity in all our business dealings. We are opposed to modern slavery and human trafficking in all its forms and are committed to implementing effective systems and controls to ensure these practices do not take place in our own business or in our supply chain.",
-      "This statement is published in the spirit of transparency and best practice. We recognise that, as a small professional services firm, the direct risk of modern slavery in our immediate operations is low, but we remain vigilant and committed to continuous improvement.",
+      "Scaleup Accounting Limited has a zero-tolerance approach to modern slavery, including slavery, servitude, human trafficking, and forced labour.",
+      "We are committed to acting ethically, transparently, and with integrity in all our business dealings and relationships. We implement and enforce effective systems and controls to ensure that modern slavery is not taking place anywhere within our business or throughout our supply chains.",
     ],
   },
   {
-    title: "2. Our Organisation and Business",
+    title: "2. Our Business and Supply Chains",
     content: [
-      "ScaleUp Accounting Ltd is an AAT Licensed Accounting Practice based in London, England. We provide bookkeeping, payroll, VAT, tax, and associated financial services to small and medium-sized businesses across the United Kingdom. We are registered in England and Wales (Company No. 17121237).",
-      "Our workforce is entirely UK-based. All of our team members are directly employed or engaged on a self-employed basis in the United Kingdom under contracts that comply with applicable employment law.",
+      "Scaleup Accounting Limited is an Association of Accounting Technicians (AAT) registered professional accounting practice based in London, United Kingdom. We provide accounting, tax, bookkeeping, and business advisory services to a wide range of clients.",
+      "As a professional services firm, we consider our exposure to modern slavery risks to be very low. Our supply chain primarily consists of:",
+      "• Professional service providers and consultants.",
+      "• Providers of IT software, cloud infrastructure, and office technology.",
+      "• Suppliers of office facilities, cleaning, and administrative support services.",
     ],
   },
   {
-    title: "3. Our Supply Chain",
+    title: "3. Our Policies on Modern Slavery",
     content: [
-      "Our supply chain is limited in scope and primarily consists of: software and technology providers (including cloud accounting platforms, document management, and communication tools), professional service providers (such as legal advisors and insurers), and office supplies and consumables.",
-      "We engage predominantly with established, reputable UK and international technology businesses, all of which publish their own modern slavery statements and maintain publicly accessible ethical trading policies.",
+      "We operate a number of internal policies to ensure our business is conducted ethically and transparently.",
+      "• Recruitment Policy – We conduct eligibility-to-work checks for all employees to safeguard against forced labour and human trafficking.",
+      "• Whistleblowing Policy – Employees, clients, and business partners are encouraged to report any concerns relating to modern slavery within our business or supply chain.",
+      "• Code of Conduct – As an AAT-registered practice, our director and staff adhere to strict ethical standards, professional integrity, and legal compliance.",
     ],
   },
   {
-    title: "4. Policies in Relation to Modern Slavery",
+    title: "4. Due Diligence Processes",
     content: [
-      "We are committed to ensuring that there is no modern slavery or human trafficking in our supply chains or in any part of our business. We maintain the following internal practices to support this commitment: all team members are engaged under written contracts at or above the National Living Wage; working hours are regulated and compliant with the Working Time Regulations 1998; and no team member's identity documents or personal belongings are retained by the Company.",
+      "As part of our commitment to identifying and reducing risk, we conduct due diligence when engaging new suppliers and periodically review existing suppliers.",
+      "Our due diligence includes:",
+      "• Evaluating modern slavery risks before appointing suppliers.",
+      "• Regularly reviewing our supply chain.",
+      "• Building long-term relationships with reputable UK suppliers wherever possible.",
+      "• Taking appropriate action, including terminating supplier relationships, where serious breaches of our ethical expectations occur.",
     ],
   },
   {
-    title: "5. Due Diligence and Risk Assessment",
+    title: "5. Risk Assessment and Management",
     content: [
-      "We assess the risk of modern slavery when engaging new suppliers. Our due diligence approach includes reviewing publicly available information about prospective suppliers, such as their own modern slavery statements, ethical trading policies, and company information.",
-      "We have identified that the primary risk areas in our supply chain relate to technology hardware manufacturing. We mitigate this by procuring hardware and technology services only from suppliers with documented and published ethical sourcing policies.",
+      "We recognise that industries such as cleaning, hospitality, and manufacturing present a higher risk of modern slavery.",
+      "Although our interaction with these sectors is limited to office support services, we remain vigilant and expect all contractors and suppliers to ensure their own supply chains are free from modern slavery while paying employees at least the National Minimum Wage or National Living Wage.",
     ],
   },
   {
     title: "6. Training and Awareness",
     content: [
-      "We ensure that all members of our team are aware of the risks of modern slavery and how to identify potential warning signs. We brief new team members on this policy as part of their onboarding and maintain ongoing awareness as part of our professional development programme.",
+      "We provide appropriate awareness information to our staff so they understand the risks of modern slavery and human trafficking.",
+      "We also expect our suppliers and business partners to provide suitable awareness and training within their own organisations.",
     ],
   },
   {
-    title: "7. Review and Approval",
+    title: "7. Approval",
     content: [
-      "This statement will be reviewed annually and updated as necessary to reflect any changes in our business or supply chain. It is approved by the directors of ScaleUp Accounting Ltd.",
-      "This statement covers the financial year ending 2026 and was last reviewed: July 2026.",
+      "This policy is supported by the Director of Scaleup Accounting Limited, who has ultimate responsibility for its implementation and ensuring adequate resources are available for continued compliance with the Modern Slavery Act 2015.",
+      "Digitally Signed by:",
+      "Mr. Sumit Monani",
+      "Director, Founder & Person with Significant Control",
+      "Scaleup Accounting Limited",
+      "July 2026",
+      "",
+      "Contact Details:",
+      "Floor 37, Regus, 1 Canada Square, Canary Wharf",
+      "London E14 5AA, United Kingdom",
+      "Email: info@scaleupaccounting.uk",
+      "Phone: +44 75187 55555",
     ],
   },
 ];
-
 export default function ModernSlaveryPage() {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -103,8 +123,16 @@ export default function ModernSlaveryPage() {
           </h1>
 
           <p className="text-[#0A1A2F]/60 text-lg md:text-xl font-light tracking-wide leading-[1.8]">
-            ScaleUp Accounting Ltd is committed to combating modern slavery and human trafficking. This statement sets out the steps we have taken to ensure our business operations and supply chain are free from these practices.
-          </p>
+  Effective Date: July 2026
+  <br />
+  <br />
+  This statement is made pursuant to Section 54(1) of the Modern Slavery Act
+  2015 and constitutes Scaleup Accounting Limited's Modern Slavery Policy and
+  Statement. Although we may not meet the statutory turnover threshold
+  requiring a mandatory statement, we voluntarily publish this policy to
+  demonstrate our commitment to ethical business practices and corporate
+  social responsibility.
+</p>
         </div>
 
         <div className="space-y-8 max-w-4xl">

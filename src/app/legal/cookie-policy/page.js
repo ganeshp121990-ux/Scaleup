@@ -20,47 +20,52 @@ const sections = [
   {
     title: "1. What Are Cookies?",
     content: [
-      "Cookies are small text files that are placed on your device when you visit a website. They are widely used to make websites work more efficiently and to provide information to website owners. Cookies do not harm your device and cannot be used to run programmes or deliver viruses.",
+      'Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used by website owners to make their websites work, or to work more efficiently, as well as to provide reporting information.',
+      'Cookies set by the website owner are called "first-party cookies". Cookies set by parties other than the website owner are called "third-party cookies". Third-party cookies enable third-party features or functionality to be provided on or through the website (e.g., advertising, interactive content, and analytics).',
     ],
   },
   {
-    title: "2. How We Use Cookies",
+    title: "2. Why Do We Use Cookies?",
     content: [
-      "Our website uses a minimal set of cookies necessary for the site to function correctly. We do not use advertising cookies or third-party tracking cookies that monitor your behaviour across other websites.",
-      "The cookies we may use fall into the following categories: Strictly Necessary Cookies, which are essential for the website to operate and cannot be switched off; and Analytics Cookies, which help us understand how visitors interact with our website so we can improve it. Analytics data is collected in an anonymised form where possible.",
+      'We use first-party and third-party cookies for several reasons. Some cookies are required for technical reasons in order for our website to operate, and we refer to these as "essential" or "strictly necessary" cookies.',
+      "Other cookies enable us to track and target the interests of our users to enhance the experience on our online property.",
     ],
   },
   {
-    title: "3. Strictly Necessary Cookies",
+    title: "3. Types of Cookies We Use",
     content: [
-      "These cookies are required for the website to function. They include session management cookies that maintain your browsing session, security cookies that help prevent fraudulent use of our website, and load balancing cookies that ensure the website remains available during high traffic. These cookies do not collect personal information and cannot be disabled.",
+      "The specific types of first and third-party cookies served through our website and the purposes they perform are:",
+      "",
+      "• Strictly Necessary Cookies\nThese cookies are essential to provide services available through our website and to use features such as accessing secure client portals or filling out forms.\nExpiry & Control: Session – cannot be disabled because the website requires them to function properly.",
+      "",
+      "• Performance & Analytics Cookies\nThese cookies collect information in aggregate form to help us understand how our website is used (for example, Google Analytics) and how effective our marketing campaigns are.\nExpiry & Control: Persistent – can be turned off via our cookie preference settings.",
+      "",
+      "• Functionality Cookies\nThese cookies enhance the performance and functionality of our website but are not essential. Without them, certain functionality may become unavailable.\nExpiry & Control: Persistent – can be managed through your browser settings.",
     ],
   },
   {
-    title: "4. Analytics Cookies",
+    title: "4. How Can I Control Cookies?",
     content: [
-      "We may use analytics tools to understand how our website is being used, which pages are most popular, and where visitors come from. This helps us improve the content and structure of our website. Where analytics tools set cookies, they are configured to anonymise IP addresses and are not used to identify individual visitors.",
-      "You can opt out of analytics tracking by enabling the Do Not Track setting in your browser, or by using your browser's cookie management tools to block or delete cookies.",
+      "You have the right to decide whether to accept or reject cookies. You can exercise your cookie preferences using our Cookie Consent Banner when you first visit our website, or by adjusting your preferences later.",
+      "You can also configure your web browser to accept or refuse cookies. If you choose to reject cookies, you may still use our website, although some functionality and areas of the website may become unavailable. Because browser controls differ, please refer to your browser's help menu for instructions.",
     ],
   },
   {
-    title: "5. Managing Your Cookie Preferences",
+    title: "5. Updates to This Policy",
     content: [
-      "Most web browsers allow you to manage cookies through their settings. You can typically set your browser to refuse cookies, or to alert you when cookies are being sent. Instructions for managing cookies in common browsers are available at: Chrome (support.google.com/chrome), Firefox (support.mozilla.org), Safari (support.apple.com), Edge (support.microsoft.com).",
-      "Please note that disabling cookies may affect the functionality of some parts of our website.",
+      "We may update this Cookie Policy from time to time to reflect changes in the cookies we use or for other operational, legal, or regulatory reasons. Please review this page periodically to stay informed about our use of cookies and related technologies.",
     ],
   },
   {
-    title: "6. Third-Party Services",
+    title: "6. Contact Us",
     content: [
-      "Our website may contain links to third-party websites or embed content from third-party services. These third parties may set their own cookies. We have no control over these cookies and they are not covered by this policy. We encourage you to review the privacy and cookie policies of any third-party websites you visit.",
-    ],
-  },
-  {
-    title: "7. Changes to This Policy",
-    content: [
-      "We may update this Cookie Policy from time to time. Any changes will be posted on this page with an updated review date. This policy was last reviewed: July 2026.",
-      "If you have any questions about our use of cookies, please contact us at advisory@scaleupaccounting.co.uk.",
+      "If you have any questions about our use of cookies or other technologies, please contact us:",
+      "Email: info@scaleupaccounting.uk",
+      "Scaleup Accounting Limited",
+      "Director: Sumit Monani",
+      "Floor 37, Regus, 1 Canada Square, Canary Wharf",
+      "London E14 5AA, United Kingdom",
+      "Phone: +44 75187 55555",
     ],
   },
 ];
@@ -102,8 +107,14 @@ export default function CookiePolicyPage() {
           </h1>
 
           <p className="text-[#0A1A2F]/60 text-lg md:text-xl font-light tracking-wide leading-[1.8]">
-            This Cookie Policy explains how ScaleUp Accounting Ltd uses cookies and similar technologies when you visit our website. We use cookies only where necessary for the site to function, and we do not use cookies for advertising or cross-site tracking.
-          </p>
+  Last updated: July 2026
+  <br />
+  <br />
+  This Cookie Policy explains how Scaleup Accounting Limited ("we", "us", or "our")
+  uses cookies and similar technologies when you visit our website
+  (https://scaleupaccounting.uk). It explains what these technologies are,
+  why we use them, and your rights to control our use of them.
+</p>
         </div>
 
         <div className="space-y-8 max-w-4xl">
