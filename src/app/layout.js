@@ -2,7 +2,6 @@ import { Inter, Poppins } from "next/font/google";
 import Script from "next/script";
 import "@/app/globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
-import Cursor from "@/components/Cursor";
 import { JSONLD_ORGANIZATION } from "@/lib/siteConfig";
 
 const inter = Inter({
@@ -119,7 +118,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${inter.variable} ${poppins.variable} overflow-x-hidden`}>
       <body className="bg-[#FDFCFB] text-[#0A1A2F] font-body overflow-x-hidden antialiased selection:bg-[#C8A96A]/30 selection:text-[#0A1A2F]">
         <SmoothScroll>{children}</SmoothScroll>
-        <Cursor />
+        
         <Script
   id="organization-schema"
   type="application/ld+json"
